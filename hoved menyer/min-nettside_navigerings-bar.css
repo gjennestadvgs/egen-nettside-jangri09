@@ -1,10 +1,10 @@
 /* hva som skjer med aktiv side */
-ul li a.active {
+#knapper li a.active {
 text-decoration: underline;
   
         }
         /* navigerings bar */
-        ul {
+        #knapper {
 font-family: Britannic, sans-serif;
   list-style-type: none;
   margin: 0;
@@ -13,11 +13,11 @@ font-family: Britannic, sans-serif;
   background-color: #7389f6;
 }
     
-ul li {
+#knapper li {
   float: right;
 }
 
-ul li a {
+#knapper li a {
   display: block;
   color: white;
   text-align: center;
@@ -26,6 +26,6 @@ ul li a {
   position: relative; 
 }
 /* hover effekt */
-ul li a:hover {
+#knapper li a:hover {
   background-color: #6e64ff;
 }
