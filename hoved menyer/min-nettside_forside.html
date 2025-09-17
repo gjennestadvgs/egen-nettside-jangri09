@@ -3,18 +3,29 @@
 <head>
     <title>Jan Olav</title>
     <link rel="stylesheet" href="min-nettside_navigerings-bar.css">
-    <link rel="stylesheet" href="min-nettside_mørk-modus.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             color: #ffffff;
             margin: 0;
             padding: 0;
-            background: #ffffff; /* Lys modus bakgrunn */
+        }
+        #lede-kanpp {
+            background-color: #7389f6;
+            color: white;
+            padding: 1% 2%;
+            text-align: center;
+            font-size: 2vw;
+            margin: 10px auto;
+            cursor: pointer;
+            border-radius: 0px;
+            border: 1px solid #ffffff;
+            transition: background-color 0.3s ease;
         }
 
         
         </style>
+        <link rel="stylesheet" href="min-nettside_mørk-modus.css">
 </head>
 <body>
    <ul id="knapper">
@@ -32,11 +43,12 @@
     color: white;
     text-align: center;
     text-shadow: 2px 2px 8px #000;
-  ">
+    ">
     <h1 style="font-size: 6vw;">Velkommen til min nettside!</h1>
     <p style="font-size: 2vw; width: 70%; max-width: 750px; margin: 0 auto;">
       Dette er forsiden av min personlige nettside. Her kan du finne informasjon om meg og mine prosjekter.
     </p>
+    <button id="lede-kanpp" onclick="window.location.href='min-nettside_om-meg.html'">Hvem er jeg?</button>
   </div>
 </div>
 </body>

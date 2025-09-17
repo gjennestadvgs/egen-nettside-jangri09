@@ -1,16 +1,19 @@
 
         @media (prefers-color-scheme: dark) {
           body {
-            background: #414046;
+            background: #4e4d51;
             color: #eee;
           }
           ul#knapper {
-            background: #2c2c2d;
+            background: #2b335b;
           }
           #knapper li a:hover {
-    background-color: #302f34;
+    background-color: #3f3a8d;
         }
         .prosjekt-kort {
-  border: 1px solid #0c0c0c;
+    border: 1px solid #444;
         }
+        #lede-kanpp {
+    background-color: #2b335b;
+    border: 1px solid #eee;
         }
