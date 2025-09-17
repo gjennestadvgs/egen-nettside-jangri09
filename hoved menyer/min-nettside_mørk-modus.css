@@ -1,0 +1,16 @@
+
+        @media (prefers-color-scheme: dark) {
+          body {
+            background: #414046;
+            color: #eee;
+          }
+          ul#knapper {
+            background: #2c2c2d;
+          }
+          #knapper li a:hover {
+    background-color: #302f34;
+        }
+        .prosjekt-kort {
+  border: 1px solid #0c0c0c;
+        }
+        }
