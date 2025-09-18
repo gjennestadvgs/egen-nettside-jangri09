@@ -27,13 +27,13 @@
   border-radius: 8px; /* Avrundede hjørner */ 
   overflow: hidden; /* Sikrer at bildet ikke stikker ut fra rammen */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gir en fin skyggeeffekt */
-    transition: transform 0.2s; /* Animasjonseffekt ved hover */
+    transition: transform 0.4s; /* Animasjonseffekt ved hover */
 }
 
 /* Stil for bildet inni kortet */
 .prosjekt-kort img {
-  width: 100%;
-  height: 80%;
+  width: 100%; /* Bildet fyller hele bredden av kortet */
+  height: 450px; /* Fast høyde for bildene */
   object-fit: cover; /* Beskjærer bildet slik at det fyller plassen pent */
 }
 
@@ -46,12 +46,12 @@
 }
 /* KI slutt */
 /* mindre grid på mindre skjerm*/
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .prosjekt-oversikt {
     grid-template-columns: repeat(2, 1fr) ; /* Én kolonne på små skjermer */
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .prosjekt-oversikt {
     grid-template-columns: 1fr; /* Én kolonne på små skjermer */
   }
@@ -80,7 +80,15 @@
   <a href="prosjekter/min-nettside_portrett-intervju.html" style="text-decoration: none; color: inherit;">
     <div class="prosjekt-kort">
     <img src="../bilder/1.png" alt="Beskrivelse av prosjekt 1"> <!-- bilde til prosjekt-->
-    <h3>Navn på Prosjekt 1</h3>
+    <h3>Portrett intervju</h3>
+    <p>Kort beskrivelse av prosjektet og teknologier brukt.</p> <!-- beskrivelse av prosjekt-->
+  </div>
+  </a>
+
+    <a href="" style="text-decoration: none; color: inherit;">
+    <div class="prosjekt-kort">
+    <img src="../bilder/Tag @ryanbreitkreutz - Free files from @signatureeditsco DSC04325_1.jpg" alt="Beskrivelse av prosjekt 1"> <!-- bilde til prosjekt-->
+    <h3>Øve oppgaver</h3>
     <p>Kort beskrivelse av prosjektet og teknologier brukt.</p> <!-- beskrivelse av prosjekt-->
   </div>
   </a>

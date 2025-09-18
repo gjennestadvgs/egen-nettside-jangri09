@@ -1,7 +1,7 @@
 
         @media (prefers-color-scheme: dark) {
           body {
-            background: #4e4d51;
+            background: #838189;
             color: #eee;
           }
           ul#knapper {
@@ -17,3 +17,4 @@
     background-color: #2b335b;
     border: 1px solid #eee;
         }
+      }

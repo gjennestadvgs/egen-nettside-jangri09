@@ -10,11 +10,43 @@
             margin: 0;
             padding: 0;
         }
+        .flex-container {
+            display: flex;
+            align-items: center;
+            min-height: 60vh;
+            gap: 32px;
+        }
+        .flex-container img {
+            width: 50vw;
+            max-width: 400px;
+            height: auto;
+        }
+        .tekst {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .tekst h1 {
+            margin-top: 0;
+        }
+
         </style>
 </head>
-<body></body>
+<body>
 <!-- navigeringsmeny -->
    <ul id="knapper">
     <li><a href="../min-nettside_om-meg.html">Om meg</a></li>
     <li><a href="../min-nettside_prosjekt-meny.html" class="active">Prosjekter</a></li>
   <li><a href="../min-nettside_forside.html">Hjem</a></li>
+</ul>
+
+  <div class="flex-container">
+  <img src="../../bilder/Filmplakat_above-the-law.jpg" alt="Filmplakat above the law">
+  <div class="tekst">
+    <h1>Filmplakat</h1>
+    <p>Dette er en filmplakat jeg lagde i Photoshop. Jeg brukte flere teknikker som lagmasker, justeringslag og tekstverktøy for å skape en profesjonell og tiltalende plakat. Jeg valgte farger og typografi som passet til filmens tema og stemning.</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,11 +1,11 @@
 /* hva som skjer med aktiv side */
 #knapper li a.active {
 text-decoration: underline;
-  
-        }
-        /* navigerings bar */
-        #knapper {
-font-family: Britannic, sans-serif;
+  }
+ /* navigerings bar */
+  #knapper {
+  font-size: clamp(16px, 2vw, 24px);
+  font-family: Britannic, sans-serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
