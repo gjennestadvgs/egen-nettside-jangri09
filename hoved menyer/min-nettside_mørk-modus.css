@@ -1,11 +1,11 @@
 
         @media (prefers-color-scheme: dark) {
         body {
-          background: #818FB4;
+          background: #3B5A5E;
           color: #333;
         }
         ul#knapper {
-            background: #363062;
+            background: #3b485e;
         }
         #knapper li a {
             color: white;
@@ -15,11 +15,11 @@
         }
         .prosjekt-kort {
     border: 1px solid #2c2b2e;
-    background-color: #F5E8C7;
-    color: #333;
+    background-color: #403B5E;
+    color: #ffffff;
         }
         #lede-kanpp {
-    background-color: #363062;
+    background-color: #25354d;
     color: white;
     border: 0.2px solid #eee;
         }
