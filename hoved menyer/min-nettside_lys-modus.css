@@ -1,21 +1,24 @@
 body {
-            background: #f0f0f0;
+            background: #818FB4;
             color: #333;
 }
         ul#knapper {
-            background: #7389f6;
+            background: #363062;
         }
         #knapper li a {
             color: white;
 }
         #knapper li a:hover {
-    background-color: #6e64ff;
+    background-color: #435585;
         }
         .prosjekt-kort {
-    border: 1px solid #ccc;
+    border: 1px solid #2c2b2e;
+    background-color: #F5E8C7;
+    color: #333;
         }
         #lede-kanpp {
-    background-color: #7389f6;
+    background-color: #363062;
     color: white;
-    border: 1px solid #eee;
+    border: 0.2px solid #eee;
         }
+
