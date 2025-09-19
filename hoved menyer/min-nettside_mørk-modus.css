@@ -1,27 +1,27 @@
 
         @media (prefers-color-scheme: dark) {
         body {
-          background: #3B5A5E;
-          color: #333;
+          background: #383b42;
+          color: #ffffff;
         }
         ul#knapper {
-            background: #3b485e;
+            background: #164465;
         }
         #knapper li a {
             color: white;
         }
         #knapper li a:hover {
-    background-color: #435585;
+    background-color: #26577a;
         }
         .prosjekt-kort {
-    border: 1px solid #2c2b2e;
-    background-color: #403B5E;
+    border: 1px solid #41444b;
+    background-color: #41444b;
     color: #ffffff;
         }
-        #lede-kanpp {
-    background-color: #25354d;
+        #lede-knapp {
+    background-color: #164465;
     color: white;
-    border: 0.2px solid #eee;
+    border: 0.4px solid #143b55;
         }
 
       }
