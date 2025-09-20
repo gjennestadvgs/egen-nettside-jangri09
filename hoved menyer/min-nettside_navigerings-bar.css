@@ -1,4 +1,7 @@
 /* hva som skjer med aktiv side */
+body {
+  margin-top: 56px; /* Juster etter høyden på navigeringsbaren */
+}
 #knapper li a.active {
 text-decoration: underline;
   }
@@ -33,8 +36,4 @@ text-decoration: underline;
 /* hover effekt */
 #knapper li a:hover {
   background-color: #6e64ff;
-}
-
-body {
-  margin-top: 56px; /* Juster etter høyden på navigeringsbaren */
 }
