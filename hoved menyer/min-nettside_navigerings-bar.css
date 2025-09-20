@@ -1,9 +1,17 @@
 /* hva som skjer med aktiv side */
+body {
+  margin-top: 56px; /* Juster etter høyden på navigeringsbaren */
+}
 #knapper li a.active {
 text-decoration: underline;
   }
  /* navigerings bar */
   #knapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   font-size: clamp(16px, 2vw, 24px);
   font-family: Britannic, sans-serif;
   list-style-type: none;
