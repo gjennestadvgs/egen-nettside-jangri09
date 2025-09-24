@@ -13,10 +13,27 @@
             <link rel="stylesheet" href="min-nettside_mørk-modus.css">
 </head>
 <body>
-    <ul id="knapper">
-        <li><a href="min-nettside_kontakt.html" class="active">Kontakt</a></li> 
-     <li><a href="min-nettside_om-meg.html">Om meg</a></li>
-     <li><a href="min-nettside_prosjekt-meny.html">Prosjekter</a></li>
-      <li><a href="min-nettside_forside.html">Hjem</a></li>
-    </ul>
+<ul id="knapper">
+  <li><a href="min-nettside_forside.html" class="active">Hjem</a></li>
+  <li><a id="menuButton">Menu</a></li>
+  </ul>
+  
+
+<div id="menuContent" class="hidden">
+  <ul>
+        <li><a href="min-nettside_kontakt.html">Kontakt</a></li>
+    <li><a href="min-nettside_om-meg.html">Om meg</a></li>
+    <li><a href="min-nettside_prosjekt-meny.html">Prosjekter</a></li>
+  </ul>
+</div>
+<script>
+    document.getElementById('menuButton').addEventListener('click', function() {
+        var menuContent = document.getElementById('menuContent');
+        if (menuContent.classList.contains('hidden')) {
+            menuContent.classList.remove('hidden');
+        } else {
+            menuContent.classList.add('hidden');
+        }
+    });
+</script>
 </body>

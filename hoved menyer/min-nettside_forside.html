@@ -25,14 +25,22 @@
         </style>
         <link rel="stylesheet" href="min-nettside_lys-modus.css">
         <link rel="stylesheet" href="min-nettside_mørk-modus.css">
+        <link rel="stylesheet" href="min-nettside_navigerings-bar.css">
 </head>
 <body>
    <ul id="knapper">
-    <li><a href="min-nettside_kontakt.html">Kontakt</a></li>
+  <li><a href="min-nettside_forside.html" class="active">Hjem</a></li>
+  <li><a id="menuButton">Menu</a></li>
+  </ul>
+  
+
+<div id="menuContent" class="hidden">
+  <ul>
+        <li><a href="min-nettside_kontakt.html">Kontakt</a></li>
     <li><a href="min-nettside_om-meg.html">Om meg</a></li>
     <li><a href="min-nettside_prosjekt-meny.html">Prosjekter</a></li>
-  <li><a href="min-nettside_forside.html" class="active">Hjem</a></li>
   </ul>
+</div>
   <div style="position: relative; width: 100vw; margin: 0;">
   <img src="bilder/PXL_20250614_163902704.jpg" alt="" style="width:100vw;height:auto;display:block;">
   <div style="
@@ -51,5 +59,15 @@
     <button id="lede-knapp" onclick="window.location.href='min-nettside_om-meg.html'">Hvem er jeg?</button>
   </div>
 </div>
+<script>
+    document.getElementById('menuButton').addEventListener('click', function() {
+        var menuContent = document.getElementById('menuContent');
+        if (menuContent.classList.contains('hidden')) {
+            menuContent.classList.remove('hidden');
+        } else {
+            menuContent.classList.add('hidden');
+        }
+    });
+</script>
 </body>
 </html>

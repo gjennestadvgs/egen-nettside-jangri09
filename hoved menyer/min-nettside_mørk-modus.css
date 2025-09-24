@@ -23,5 +23,14 @@
     color: white;
     border: 0.4px solid #143b55;
         }
-
+.info {
+                background: #41444b; /* Bakgrunnsfarge på boksen */
+        }
+        #menuContent {
+        border: 1px solid #2c3e50;
+        background-color: #164465;
+        }
+        #menuContent li a {
+        color: white;
       }
+        }

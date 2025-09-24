@@ -1,33 +1,78 @@
 /* hva som skjer med aktiv side */
 body {
   margin-top: 56px; /* Juster etter høyden på navigeringsbaren */
+
 }
-#knapper li a.active {
+#knapper .menuContent li a.active {
 text-decoration: underline;
   }
  /* navigerings bar */
   #knapper {
+  cursor: pointer;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1004;
   font-size: clamp(16px, 2vw, 24px);
   font-family: Britannic, sans-serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 56px;
 }
     
 #knapper li {
-  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-#knapper li a {
+#knapper li a,
+#menuContent li a {
   display: block;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  position: relative; 
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
 }
+
+#knapper li a.active {
+  text-decoration: underline;
+}
+
+#menuContent {
+  font-size: 18px;
+  font-family: Britannic, sans-serif;
+  position: absolute;
+  top: 56px;
+  right: 0;
+  z-index: 1003;
+  padding: 0;
+  min-width: 180px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#menuContent.hidden {
+  display: none;
+}
+
+#menuContent ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menuContent li {
+  margin: 0;
+  padding: 0;
+}
+

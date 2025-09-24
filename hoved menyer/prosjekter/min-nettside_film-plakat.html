@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Jan Olav</title>
-    <link rel="stylesheet" href="../min-nettside_navigerings-bar.css">
-    <link rel="stylesheet" href="min-nettside_lys-modus.css">
+    <link rel="stylesheet" href="min-nettside_styling -for-prosjekt-sider.css">
+    <link rel="stylesheet" href="../min-nettside_lys-modus.css">
     <link rel="stylesheet" href="../min-nettside_mørk-modus.css">
     <style>
         body {
@@ -17,10 +17,18 @@
 <body>
 <!-- navigeringsmeny -->
    <ul id="knapper">
+  <li><a href="../min-nettside_forside.html" class="active">Hjem</a></li>
+  <li><a id="menuButton">Menu</a></li>
+  </ul>
+  
+
+<div id="menuContent" class="hidden">
+  <ul>
+        <li><a href="../min-nettside_kontakt.html">Kontakt</a></li>
     <li><a href="../min-nettside_om-meg.html">Om meg</a></li>
-    <li><a href="../min-nettside_prosjekt-meny.html" class="active">Prosjekter</a></li>
-  <li><a href="../min-nettside_forside.html">Hjem</a></li>
-</ul>
+    <li><a href="../min-nettside_prosjekt-meny.html">Prosjekter</a></li>
+  </ul>
+</div>
 
 <div class="flex-container">
   <div class="bilde-kolonne">
@@ -31,5 +39,15 @@
     <p>Dette er en filmplakat jeg lagde i Photoshop. Jeg brukte flere teknikker som lagmasker, justeringslag og tekstverktøy for å skape en profesjonell og tiltalende plakat. Jeg valgte farger og typografi som passet til filmens tema og stemning.</p>
   </div>
 </div>
+<script>
+    document.getElementById('menuButton').addEventListener('click', function() {
+        var menuContent = document.getElementById('menuContent');
+        if (menuContent.classList.contains('hidden')) {
+            menuContent.classList.remove('hidden');
+        } else {
+            menuContent.classList.add('hidden');
+        }
+    });
+</script>
 </body>
 </html>
