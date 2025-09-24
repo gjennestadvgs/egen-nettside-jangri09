@@ -42,6 +42,17 @@
   transform: translateY(-5px); /* Løfter kortet litt opp */
 }
 /* KI slutt */
+.prosjekt-oversikt.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.prosjekt-oversikt {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.prosjekt-oversikt.visible {
+  opacity: 1;
+}
 /* mindre grid på mindre skjerm*/
 @media (max-width: 800px) {
   .prosjekt-oversikt {
@@ -102,14 +113,32 @@
   </a>
   </div>
   <script>
-    document.getElementById('menuButton').addEventListener('click', function() {
-        var menuContent = document.getElementById('menuContent');
-        if (menuContent.classList.contains('hidden')) {
-            menuContent.classList.remove('hidden');
-        } else {
-            menuContent.classList.add('hidden');
-        }
+  // Fade inn prosjekt-oversikt når siden lastes
+  window.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.prosjekt-oversikt').classList.add('visible');
+  });
+
+  // Fade ut ved klikk på prosjekt
+  document.querySelectorAll('.prosjekt-oversikt a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const grid = document.querySelector('.prosjekt-oversikt');
+      grid.classList.remove('visible');
+      grid.classList.add('fade-out');
+      setTimeout(function() {
+        window.location.href = link.href;
+      }, 500);
     });
+  });
+
+  document.getElementById('menuButton').addEventListener('click', function() {
+    var menuContent = document.getElementById('menuContent');
+    if (menuContent.classList.contains('hidden')) {
+      menuContent.classList.remove('hidden');
+    } else {
+      menuContent.classList.add('hidden');
+    }
+  });
 </script>
 </body>
 </html>
