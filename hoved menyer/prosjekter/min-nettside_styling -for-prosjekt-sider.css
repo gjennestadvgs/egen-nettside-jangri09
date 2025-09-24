@@ -17,7 +17,7 @@
         }
          .info {
     position: fixed;
-    top: 0;
+    top: 56px; /* Starter under navigeringsbaren */
     bottom: 0;
     right: 0;
     width: 200px; /* Juster bredde etter behov */
@@ -25,7 +25,8 @@
     padding: 20px;
     font-size: 0.9em;
     text-align: left;
-    z-index: 100;
+    z-index: 1;
+    overflow-y: auto; /* Scroll hvis det er mye tekst */
 }
         .inhold h1 {
             margin-top: 10px;
