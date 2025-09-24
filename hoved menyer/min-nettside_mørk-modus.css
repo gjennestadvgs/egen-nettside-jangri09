@@ -35,4 +35,10 @@
       .om-meg-container {
         background-color: #41444b;
         }
+        .kontakt {
+            background: #41444b;
+        }
+        .kontakt:hover {
+            background: #3e7aa4;
+        }
         }
