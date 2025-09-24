@@ -13,6 +13,7 @@
             <link rel="stylesheet" href="min-nettside_mørk-modus.css">
 </head>
 <body>
+    <!-- Navigeringsknapper -->
    <ul id="knapper">
   <li><a id="homeButton" href="min-nettside_forside.html" class="active"><i class="fa fa-home"></i></a></li>
   <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
@@ -36,4 +37,86 @@
         }
     });
 </script>
+<!-- Kontaktliste -->
+<!-- laget av KI-->
+<div class="kontakt-liste">
+  <div class="kontakt">
+    <img src="kontakt-bilder/jan-olav.jpg" alt="Jan Olav">
+    <div class="kontakt-info">
+      <h2>Jan Olav</h2>
+      <p>E-post: jan.olav@example.com</p>
+      <div class="kontakt-linker">
+        <a href="https://github.com/janolav" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://linkedin.com/in/janolav" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="kontakt">
+    <img src="kontakt-bilder/venn.jpg" alt="Venn">
+    <div class="kontakt-info">
+      <h2>Venn</h2>
+      <p>E-post: venn@example.com</p>
+      <div class="kontakt-linker">
+        <a href="https://instagram.com/venn" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+  </div>
+  <!-- Legg til flere kontakter her -->
+</div>
+
+<style>
+.kontakt-liste {
+  max-width: 700px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.kontakt {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.kontakt img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.kontakt-info h2 {
+  margin: 0 0 8px 0;
+}
+.kontakt-linker {
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+}
+.kontakt-linker a {
+  text-decoration: none;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.kontakt-linker a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 700px) {
+  .kontakt {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .kontakt img {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+</style>
+
 </body>
+</html>
