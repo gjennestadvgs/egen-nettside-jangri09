@@ -52,7 +52,7 @@ text-decoration: underline;
 #menuContent {
   font-size: 18px;
   font-family: Britannic, sans-serif;
-  position: absolute;
+  position: fixed;
   top: 56px;
   right: 0;
   z-index: 1003;
