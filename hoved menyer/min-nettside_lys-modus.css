@@ -22,7 +22,7 @@ body {
     border: 0.4px solid #184f76;
         }
         .info {
-                background: #f5f5f5; /* Bakgrunnsfarge på boksen */
+                background: #dee5f0; /* Bakgrunnsfarge på boksen */
         }
         #menuContent {
         border: 1px solid #184f76;
@@ -30,5 +30,8 @@ body {
         }
         #menuContent li a {
         color: white;
+        }
+        .om-meg-container {
+        background-color: #ffffff;
         }
 

@@ -20,7 +20,6 @@
         }
         #lede-knapp {
     background-color: #164465;
-    color: white;
     border: 0.4px solid #143b55;
         }
 .info {
@@ -33,4 +32,7 @@
         #menuContent li a {
         color: white;
       }
+      .om-meg-container {
+        background-color: #41444b;
+        }
         }

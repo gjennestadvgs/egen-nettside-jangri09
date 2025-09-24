@@ -3,68 +3,15 @@
     <title>Jan Olav</title>
     <link rel="stylesheet" href="min-nettside_navigerings-bar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="bilder/favicon-16x16.png">
+    <link rel="stylesheet" href="min-nettside_lys-modus.css">
+    <link rel="stylesheet" href="min-nettside_mørk-modus.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
-        </style>
-            <link rel="stylesheet" href="min-nettside_mørk-modus.css">
-</head>
-<body>
-    <!-- Navigeringsknapper -->
-   <ul id="knapper">
-  <li><a id="homeButton" href="min-nettside_forside.html" class="active"><i class="fa fa-home"></i></a></li>
-  <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
-  </ul>
-  
-
-<div id="menuContent" class="hidden">
-  <ul>
-        <li><a href="min-nettside_kontakt.html">Kontakt</a></li>
-    <li><a href="min-nettside_om-meg.html">Om meg</a></li>
-    <li><a href="min-nettside_prosjekt-meny.html">Prosjekter</a></li>
-  </ul>
-</div>
-<script>
-    document.getElementById('menuButton').addEventListener('click', function() {
-        var menuContent = document.getElementById('menuContent');
-        if (menuContent.classList.contains('hidden')) {
-            menuContent.classList.remove('hidden');
-        } else {
-            menuContent.classList.add('hidden');
-        }
-    });
-</script>
-<!-- Kontaktliste -->
-<!-- laget av KI-->
-<div class="kontakt-liste">
-  <div class="kontakt">
-    <img src="kontakt-bilder/jan-olav.jpg" alt="Jan Olav">
-    <div class="kontakt-info">
-      <h2>Jan Olav</h2>
-      <p>E-post: jan.olav@example.com</p>
-      <div class="kontakt-linker">
-        <a href="https://github.com/janolav" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://linkedin.com/in/janolav" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      </div>
-    </div>
-  </div>
-  <div class="kontakt">
-    <img src="kontakt-bilder/venn.jpg" alt="Venn">
-    <div class="kontakt-info">
-      <h2>Venn</h2>
-      <p>E-post: venn@example.com</p>
-      <div class="kontakt-linker">
-        <a href="https://instagram.com/venn" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-      </div>
-    </div>
-  </div>
-  <!-- Legg til flere kontakter her -->
-</div>
-
-<style>
 .kontakt-liste {
   max-width: 700px;
   margin: 40px auto;
@@ -116,7 +63,60 @@
   }
 }
 
-</style>
+        </style>
+            <link rel="stylesheet" href="min-nettside_mørk-modus.css">
+</head>
+<body>
+    <!-- Navigeringsknapper -->
+   <ul id="knapper">
+  <li><a id="homeButton" href="min-nettside_forside.html" class="active"><i class="fa fa-home"></i></a></li>
+  <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
+  </ul>
+  
+
+<div id="menuContent" class="hidden">
+  <ul>
+        <li><a href="min-nettside_kontakt.html">Kontakt</a></li>
+    <li><a href="min-nettside_om-meg.html">Om meg</a></li>
+    <li><a href="min-nettside_prosjekt-meny.html">Prosjekter</a></li>
+  </ul>
+</div>
+<script>
+    document.getElementById('menuButton').addEventListener('click', function() {
+        var menuContent = document.getElementById('menuContent');
+        if (menuContent.classList.contains('hidden')) {
+            menuContent.classList.remove('hidden');
+        } else {
+            menuContent.classList.add('hidden');
+        }
+    });
+</script>
+<!-- Kontaktliste -->
+<!-- laget av KI-->
+<div class="kontakt-liste">
+  <div class="kontakt">
+    <img src="kontakt-bilder/jan-olav.jpg" alt="Jan Olav">
+    <div class="kontakt-info">
+      <h2>Jan Olav</h2>
+      <p>E-post: janolavgrimsrud@gmail.com</p>
+      <div class="kontakt-linker">
+        <a href="https://github.com/jangri09" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </div>
+  <div class="kontakt">
+    <img src="kontakt-bilder/venn.jpg" alt="Venn">
+    <div class="kontakt-info">
+      <h2>Venn</h2>
+      <p>E-post: venn@example.com</p>
+      <div class="kontakt-linker">
+        <a href="https://instagram.com/venn" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+  </div>
+  <!-- Legg til flere kontakter her -->
+</div>
+
 
 </body>
 </html>
