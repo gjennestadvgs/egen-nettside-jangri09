@@ -1,20 +1,27 @@
 
         @media (prefers-color-scheme: dark) {
-          body {
-            background: #838189;
-            color: #eee;
-          }
-          ul#knapper {
-            background: #2b335b;
-          }
-          #knapper li a:hover {
-    background-color: #3f3a8d;
+        body {
+          background: #383b42;
+          color: #ffffff;
+        }
+        ul#knapper {
+            background: #164465;
+        }
+        #knapper li a {
+            color: white;
+        }
+        #knapper li a:hover {
+    background-color: #26577a;
         }
         .prosjekt-kort {
-    border: 1px solid #444;
+    border: 1px solid #41444b;
+    background-color: #41444b;
+    color: #ffffff;
         }
-        #lede-kanpp {
-    background-color: #2b335b;
-    border: 1px solid #eee;
+        #lede-knapp {
+    background-color: #164465;
+    color: white;
+    border: 0.4px solid #143b55;
         }
+
       }
