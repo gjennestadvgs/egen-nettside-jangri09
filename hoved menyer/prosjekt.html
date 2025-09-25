@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+  <title>Prosjekt</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* dette er inspirert av KI*/
+        /* Stil for selve rutenettet */
+.prosjekt-oversikt {
+  display: grid; /* Gjør elementet om til et rutenett */
+  grid-template-columns: repeat(3, 1fr); /* Lager 3 like brede kolonner */
+  gap: 10px; /* Avstand mellom prosjektkortene */
+  margin: 0 auto; /* Sentrerer rutenettet på siden */
+  max-width: 1100px; /* Begrenser bredden for større skjermer */
+  padding: 10px; /* Legger til litt padding rundt rutenettet */
+}
+
+/* Stil for hvert enkelt prosjektkort */
+.prosjekt-kort {
+  border-radius: 8px; /* Avrundede hjørner */ 
+  overflow: hidden; /* Sikrer at bildet ikke stikker ut fra rammen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gir en fin skyggeeffekt */
+    transition: transform 0.4s; /* Animasjonseffekt ved hover */
+}
+
+/* Stil for bildet inni kortet */
+.prosjekt-kort img,
+.prosjekt-kort i.fab.fa-github {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+  text-align: center;
+  line-height: 450px;
+}
+
+.prosjekt-kort i.fab.fa-github {
+  font-size: 220px;
+  color: #24292f;
+}
+
+/* Stil for teksten inni kortet */
+.prosjekt-kort h3, .prosjekt-kort p {
+  padding-left: 10px; /* Legger til litt avstand rundt teksten */
+}
+.prosjekt-kort:hover {
+  transform: translateY(-5px); /* Løfter kortet litt opp */
+}
+/* KI slutt */
+.prosjekt-oversikt.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+/* mindre grid på mindre skjerm*/
+@media (max-width: 800px) {
+  .prosjekt-oversikt {
+    grid-template-columns: repeat(2, 1fr) ; /* Én kolonne på små skjermer */
+  }
+}
+@media (max-width: 500px) {
+  .prosjekt-oversikt {
+    grid-template-columns: 1fr; /* Én kolonne på små skjermer */
+  }
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 10px;
+}
+.bilde-kolonne {
+  flex: 1;
+  padding: 10px;
+}
+.inhold {
+  flex: 2;
+  padding: 10px;
+}
+.info {
+  flex: 1;
+  padding: 10px;
+}
+  </style>
+  <link rel="stylesheet" href="min-nettside_navigerings-bar.css">
+  <link rel="stylesheet" href="min-nettside_lys-modus.css">
+  <link rel="stylesheet" href="min-nettside_mørk-modus.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="prosjekter/min-nettside_styling-for-prosjekt-sider.css">
+</head>
+<body>
+  <ul id="knapper">
+    <li><a id="homeButton" href="min-nettside_forside.html" class="active"><i class="fa fa-home"></i></a></li>
+    <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
+  </ul>
+  <div id="menuContent" class="hidden">
+    <ul>
+      <li><a href="min-nettside_kontakt.html">Kontakt</a></li>
+      <li><a href="min-nettside_om-meg.html">Om meg</a></li>
+      <li><a href="min-nettside_prosjekt-meny.html">Prosjekter</a></li>
+    </ul>
+  </div>
+  <div class="prosjekt-detaljer" id="prosjekt-detaljer"></div>
+  <div class="flex-container">
+  <div class="bilde-kolonne" id="bilde-kolonne"></div>
+  <div class="inhold" id="inhold"></div>
+  <div class="info" id="info"></div>
+</div>
+  <script>
+    // Prosjekt-array
+    const prosjekter = [
+      {
+        id: "film-plakat",
+        tittel: "Film plakat",
+        bilde: "prosjekter/prosjekt-bilder/Filmplakat_above-the-law.jpg",
+        tekst: "Kort beskrivelse av prosjektet og teknologier brukt."
+      },
+      {
+        id: "portrett-intervju",
+        tittel: "Portrett intervju",
+        bilde: "prosjekter/prosjekt-bilder/1.png",
+        tekst: "Kort beskrivelse av prosjektet og teknologier brukt."
+      },
+      {
+        id: "øve-oppgaver",
+        tittel: "Øve oppgaver",
+        bilde: "prosjekter/prosjekt-bilder/øve-oppgave3.png",
+        tekst: "Kort beskrivelse av prosjektet og teknologier brukt."
+      },
+      {
+        id: "github",
+        tittel: "GitHub",
+        ikon: "fab fa-github",
+        tekst: "Kort beskrivelse av prosjektet og teknologier brukt."
+      }
+    ];
+
+    // Hent prosjekt-ID fra URL
+    function getQueryParam(name) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name);
+    }
+
+    function visProsjekt() {
+      const id = getQueryParam('id');
+      const prosjekt = prosjekter.find(p => p.id === id);
+      if (!prosjekt) {
+        document.querySelector('.inhold').innerHTML = "<h1>Prosjekt ikke funnet</h1>";
+        document.querySelector('.bilde-kolonne').innerHTML = "";
+        document.querySelector('.info').innerHTML = "";
+        return;
+      }
+      // Bilde eller ikon
+      let bildeHtml = prosjekt.bilde
+        ? `<img src="${prosjekt.bilde}" alt="${prosjekt.tittel}">`
+        : `<i class="${prosjekt.ikon}" style="font-size:220px; color:#24292f; width:100%; height:450px; display:block; text-align:center; line-height:450px;"></i>`;
+      document.querySelector('.bilde-kolonne').innerHTML = bildeHtml;
+
+      // Tittel og tekst
+      document.querySelector('.inhold').innerHTML = `
+        <h1>${prosjekt.tittel}</h1>
+        <p>${prosjekt.tekst}</p>
+      `;
+
+      // Info-boks (du kan tilpasse denne)
+      document.querySelector('.info').innerHTML = `
+        <p><strong>Teknologi:</strong> ${prosjekt.tittel.includes("GitHub") ? "GitHub" : "HTML, CSS, JS"}</p>
+        <p><strong>År:</strong> 2024</p>
+      `;
+    }
+
+    document.getElementById('menuButton').addEventListener('click', function() {
+      var menuContent = document.getElementById('menuContent');
+      menuContent.classList.toggle('hidden');
+    });
+
+    document.addEventListener('DOMContentLoaded', visProsjekt);
+  </script>
+</body>
+</html>

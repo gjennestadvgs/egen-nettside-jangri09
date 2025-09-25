@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <title>Mine Prosjekter</title>
+  <link rel="stylesheet" href="min-nettside_navigerings-bar.css">
+  <style>
+    #prosjekt-innhold { padding: 32px; min-height: 300px; }
+    .prosjekt-valg { margin: 20px 0; }
+    .prosjekt-valg button { margin-right: 10px; }
+  </style>
+</head>
+<body>
+  <ul id="knapper">
+    <li><a id="homeButton" href="min-nettside_forside.html" class="active"><i class="fa fa-home"></i></a></li>
+    <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
+  </ul>
+  <div id="menuContent" class="hidden">
+    <!-- ... -->
+  </div>
+
+  <div class="prosjekt-valg">
+    <button onclick="lastProsjekt('film-plakat.txt')">Filmplakat</button>
+    <button onclick="lastProsjekt('portrett-intervju.txt')">Portrett intervju</button>
+    <button onclick="lastProsjekt('ove-oppgaver.txt')">Øve oppgaver</button>
+    <button onclick="lastProsjekt('github.txt')">GitHub</button>
+  </div>
+  <div id="prosjekt-innhold">
+    <!-- Her vises innholdet fra valgt txt-fil -->
+  </div>
+
+  <script>
+    function lastProsjekt(filnavn) {
+      fetch(filnavn)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('prosjekt-innhold').innerHTML = data;
+        })
+        .catch(() => {
+          document.getElementById('prosjekt-innhold').innerHTML = "Fant ikke prosjektet.";
+        });
+    }
+  </script>
+</body>
+</html>

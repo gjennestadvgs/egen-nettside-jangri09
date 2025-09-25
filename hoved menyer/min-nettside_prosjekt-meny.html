@@ -28,10 +28,19 @@
 }
 
 /* Stil for bildet inni kortet */
-.prosjekt-kort img {
-  width: 100%; /* Bildet fyller hele bredden av kortet */
-  height: 450px; /* Fast høyde for bildene */
-  object-fit: cover; /* Beskjærer bildet slik at det fyller plassen pent */
+.prosjekt-kort img,
+.prosjekt-kort i.fab.fa-github {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+  text-align: center;
+  line-height: 450px;
+}
+
+.prosjekt-kort i.fab.fa-github {
+  font-size: 220px;
+  color: #24292f;
 }
 
 /* Stil for teksten inni kortet */
@@ -82,15 +91,15 @@
   <!-- prosjekt meny-->
   <div class="prosjekt-oversikt">
 
-  <a href="prosjekter/min-nettside_film-plakat.html" style="text-decoration: none; color: inherit;">
+<a href="prosjekt.html?id=film-plakat" style="text-decoration: none; color: inherit;">
   <div class="prosjekt-kort">
   <img src="prosjekter/prosjekt-bilder/Filmplakat_above-the-law.jpg" alt="Film plakat"> <!-- bilde til prosjekt-->
     <h3>Film plakat</h3>
     <p>Kort beskrivelse av prosjektet og teknologier brukt.</p> <!-- beskrivelse av prosjekt-->
   </div>
-  </a>
-    
-  <a href="prosjekter/min-nettside_portrett-intervju.html" style="text-decoration: none; color: inherit;">
+</a>
+
+  <a href="prosjekt.html?id=portrett-intervju" style="text-decoration: none; color: inherit;">
     <div class="prosjekt-kort">
     <img src="prosjekter/prosjekt-bilder/1.png" alt="Beskrivelse av prosjekt 1"> <!-- bilde til prosjekt-->
     <h3>Portrett intervju</h3>
@@ -98,18 +107,18 @@
   </div>
   </a>
 
-    <a href="prosjekter/min-nettside_øve-oppgaver.html" style="text-decoration: none; color: inherit;">
+    <a href="prosjekt.html?id=øve-oppgave" style="text-decoration: none; color: inherit;">
     <div class="prosjekt-kort">
     <img src="prosjekter/prosjekt-bilder/øve-oppgave3.png" alt="Beskrivelse av prosjekt 1"> <!-- bilde til prosjekt-->
     <h3>Øve oppgaver</h3>
     <p>Kort beskrivelse av prosjektet og teknologier brukt.</p> <!-- beskrivelse av prosjekt-->
   </div>
   </a>
-  <a href="prosjekter/min-nettside_github.html" style="text-decoration: none; color: inherit;">
+  <a href="prosjekt.html?id=github" style="text-decoration: none; color: inherit;">
     <div class="prosjekt-kort">
-    <i class="fab fa-github" style="font-size: 30vw; color: #24292f; margin-top: 16px;"></i>
+    <i class="fab fa-github"></i>
     <h3>Øve oppgaver</h3>
-    <p>Kort beskrivelse av prosjektet og teknologier brukt.</p> <!-- beskrivelse av prosjekt-->
+    <p>Kort beskrivelse av prosjektet og teknologier brukt.</p>
   </div>
   </a>
   </div>
