@@ -26,12 +26,20 @@
         }
         .om-meg-container.xxl {
             grid-column: span 3;
-            min-height: 500px;
+            min-height: 300px;
             height: auto;
+            text-align: left;
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+        }
+        .om-meg-container.xxl h1,
+        .om-meg-container.xxl p {
+            text-align: left;
         }
         .om-meg-container.large {
             grid-column: span 2;
-            min-height: 400px;
+            min-height: 300px;
             height: auto;
         }
         .om-meg-container.small {
@@ -112,6 +120,27 @@
         .om-meg-knapp:focus h1 {
             color: #3e7aa4;
         }
+        .xxl-innhold {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 100%;
+            gap: 32px;
+        }
+        .xxl-tekst {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .xxl-bilde {
+            flex: 1;
+            width: 70%;
+            border-radius: 8px;
+            margin-top: 0;
+            margin-left: 12px;
+            align-self: flex-start;
+        }
         @media (max-width: 700px) {
             .om-meg-grid {
                 grid-template-columns: 1fr; /* Kun én kolonne på mobil */
@@ -125,6 +154,15 @@
                 grid-column: span 1 !important; /* Tving alle til én kolonne */
                 min-height: 220px;
                 padding: 16px 8px;
+            }
+            .xxl-innhold {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .xxl-bilde {
+                width: 90%;
+                max-width: 100%;
+                margin-left: 0;
             }
         }
     </style>
@@ -150,7 +188,6 @@
             <p>
                 Jeg er en kreativ og nysgjerrig person som liker å jobbe med design, foto og webutvikling. På denne nettsiden finner du mine prosjekter, litt om meg og hvordan du kan kontakte meg. Jeg liker å lære nye ting og utfordre meg selv, både på skolen og i fritiden.
             </p>
-            <a href="min-nettside_prosjekt-meny.html?id=film-plakat">Film plakat</a>
          </div>
          <div class="om-meg-linker">
             <a href="mailto:jan.olav@example.com"><i class="fa fa-envelope"></i> E-post</a>
@@ -173,11 +210,14 @@
          </div>
       </a>
       <div class="om-meg-container xxl">
-      <div style="display:flex; flex-direction:column; align-items:center;">
-         <i class="fa fa-newspaper" style="font-size:2.5em; color:#3e7aa4; margin-bottom:10px;"></i>
-         <h1>Nyheter</h1>
-         <p>Les siste nytt og oppdateringer fra meg.</p>
-         <img src="bilder/nyheter.jpg" alt="Nyheter" style="margin-top:12px; max-width:100%; border-radius:8px;">
+         <div class="xxl-innhold">
+            <div class="xxl-tekst">
+               <i class="fa fa-newspaper" style="font-size:2.5em; color:#3e7aa4; margin-bottom:10px;"></i>
+               <h1>Nettsiden er åpen!</h1>
+               <p>etter en lang og grundig prosess er nettsiden endelig åpen for publikum!</p>
+            </div>
+            <img src="bilder/nyheter.png" alt="Nyheter" class="xxl-bilde">
+         </div>
       </div>
    </div>
       <!-- Du kan legge til flere bokser med linker om du ønsker -->
