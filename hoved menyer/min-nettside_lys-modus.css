@@ -1,49 +1,54 @@
 body {
-            background: #edf5ff;
-            color: #333;
+            background: #edf5ff; /* bakgrunnsfarge */
+            color: #333; /* tekstfarge */
 }
+
         ul#knapper {
-            background: #20618f;
+            background: #20618f; /* bakgrunnsfarge på navigasjonsbaren */
         }
         #knapper li a {
-            color: white;
+            color: white; /* tekstfarge på knappene til navigasjonsbaren */
 }
         #knapper li a:hover,
         #menuContent li a:hover {
-    background-color: #3e7aa4;
+    background-color: #3e7aa4; /* bakgrunnsfarge ved hover navigasjonsbar */
         }
         .prosjekt-kort {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Bakgrunnsfarge på prosjekt kortene */
         }
         #lede-knapp {
-    background-color: #20618f;
-    color: white;
-    border: 0.4px solid #184f76;
+    background-color: #20618f; /* Bakgrunnsfarge på hovedmeny knappen */
+    color: white; /* Tekstfarge på hovedmeny knappen */
+    border: 0.4px solid #184f76; /* Kantfarge på hovedmeny knappen */
         }
         .info {
                 background: #dee5f0; /* Bakgrunnsfarge på boksen */
         }
         #menuContent {
-        border: 1px solid #184f76;
-        background-color: #20618f;
+        border: 1px solid #184f76; /* Kantfarge på dropdown menyen */
+        background-color: #20618f; /* Bakgrunnsfarge på dropdown menyen */
         }
         #menuContent li a {
-        color: white;
+        color: white; /* Tekstfarge på lenkene i dropdown menyen */
         }
         .om-meg-container {
-        background-color: #ffffff;
+        background-color: #ffffff; /* Bakgrunnsfarge på om meg boksen */
         }
         .kontakt {
-            background: #ffffff;
+            background: #ffffff; /* Bakgrunnsfarge på kontakt boksen */
         }
         .kontakt:hover {
-            background: #eaf0ff;
+            background: #eaf0ff; /* Bakgrunnsfarge ved hover på kontakt boksen */
         }
-        link a {
-              color: #3e7aa4;
+/* farge linker */
+        .link a {
+  color: #3e7aa4;
   background: #fff;
-        }
-        link a:hover {
-    background: #eaf0ff;
-        }
+}
+.link a:hover {
+  background: #eaf0ff;
+}
+.link a:visited {
+  color: #3e7aa4;
+}
 

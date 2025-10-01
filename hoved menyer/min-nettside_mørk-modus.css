@@ -1,51 +1,55 @@
 
         @media (prefers-color-scheme: dark) {
         body {
-          background: #383b42;
-          color: #ffffff;
+          background: #383b42; /* bakgrunnsfarge */
+          color: #ffffff; /* tekstfarge */
         }
         ul#knapper {
-            background: #164465;
+            background: #164465; /* bakgrunnsfarge på navigasjonsbaren */
         }
         #knapper li a {
-            color: white;
+            color: white; /* tekstfarge på knappene til navigasjonsbaren */
         }
         #knapper li a:hover {
-    background-color: #26577a;
+    background-color: #26577a; /* bakgrunnsfarge ved hover navigasjonsbar */
         }
         .prosjekt-kort {
-    border: 1px solid #41444b;
-    background-color: #41444b;
-    color: #ffffff;
+    border: 1px solid #41444b; /* Kantfarge på prosjekt kortene */
+    background-color: #41444b; /* Bakgrunnsfarge på prosjekt kortene */
+    color: #ffffff; /* Tekstfarge på prosjekt kortene */
         }
         #lede-knapp {
-    background-color: #164465;
-    border: 0.4px solid #143b55;
+    background-color: #164465; /* Bakgrunnsfarge på hovedmeny knappen */
+    border: 0.4px solid #143b55; /* Kantfarge på hovedmeny knappen */
         }
 .info {
-                background: #41444b; /* Bakgrunnsfarge på boksen */
+         background: #41444b; /* Bakgrunnsfarge på boksen */
         }
         #menuContent {
-        border: 1px solid #2c3e50;
-        background-color: #164465;
+        border: 1px solid #2c3e50; /* Kantfarge på dropdown menyen */
+        background-color: #164465;  /* Bakgrunnsfarge på dropdown menyen */
         }
         #menuContent li a {
-        color: white;
+        color: white; /* Tekstfarge på lenkene i dropdown menyen */
       }
       .om-meg-container {
-        background-color: #41444b;
+        background-color: #41444b; /* Bakgrunnsfarge på om meg boksen */
         }
         .kontakt {
-            background: #41444b;
+            background: #41444b; /* Bakgrunnsfarge på kontakt boksen */
         }
         .kontakt:hover {
-            background: #3e7aa4;
+            background: #3e7aa4; /* Bakgrunnsfarge ved hover på kontakt boksen */
         }
         }
-        link a {
-    color: #3e7aa4;
+/* farge linker */
+.link a {
+  color: #3e7aa4;
   background: #3c3f45;
-        }
-        link a:hover {
-    background: #33363b;
-        }
+}
+.link a:hover {
+  background: #33363b;
+}
+.link a:visited {
+  color: #3e7aa4;
+}
