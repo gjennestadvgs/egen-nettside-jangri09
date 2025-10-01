@@ -13,7 +13,6 @@ body {
     background-color: #3e7aa4;
         }
         .prosjekt-kort {
-    border: 1px solid #ffffff;
     background-color: #ffffff;
         }
         #lede-knapp {
@@ -40,11 +39,11 @@ body {
         .kontakt:hover {
             background: #eaf0ff;
         }
-        a {
+        link a {
               color: #3e7aa4;
   background: #fff;
         }
-        a:hover {
+        link a:hover {
     background: #eaf0ff;
         }
 
