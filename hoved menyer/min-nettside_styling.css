@@ -1,7 +1,9 @@
-/* Felles styling for lenker med ikoner */
-.link a:hover i {
-  transform: rotate(-10deg) scale(1.2);
-}
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+/* Felles styling for lenker */
 .link a {
   text-decoration: none;
   font-size: 1em;
@@ -17,10 +19,24 @@
   transform: scale(1.08);
   text-decoration: none;
 }
-/* Ikon-styling */
+/* felles Ikon-styling for linker */
 .link a i {
   transition: color 0.2s, transform 0.2s;
 }
 .link a:hover i {
   transform: rotate(-10deg) scale(1.2);
 }
+/* Felles tekst utseende */
+ h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+ }
+ a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+ }
+
