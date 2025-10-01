@@ -1,7 +1,8 @@
 body {
-    margin: 0;
-    margin-top: 56px; /* Juster etter høyden på navigeringsbaren */
-     padding: 0;
+   margin: 0;
+   margin-top: 56px; /* Juster etter høyden på navigeringsbaren */
+   padding: 0;
+   overflow-x: hidden;
         }
 /* Felles styling for lenker */
 .link a {

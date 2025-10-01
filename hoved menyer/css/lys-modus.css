@@ -8,10 +8,10 @@ body {
         }
         #knapper li a {
             color: white; /* tekstfarge på knappene til navigasjonsbaren */
-}
-        #knapper li a:hover,
-        #menuContent li a:hover {
-    background-color: #3e7aa4; /* bakgrunnsfarge ved hover navigasjonsbar */
+        }
+        #knapper li a::before,
+        #menuContent li a::before {
+              background: rgba(115,137,246,0.18); /* Lys blå sirkel */
         }
         .prosjekt-kort {
     background-color: #ffffff; /* Bakgrunnsfarge på prosjekt kortene */
