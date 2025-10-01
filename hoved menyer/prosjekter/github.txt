@@ -1,0 +1,5 @@
+Dette var et prosjekt hvor vi skulle 
+---
+Dato: 01.10.2025
+Linker:
+<a href="https://github.com/jangri09/jangri09" target="_blank">GitHub</a>

@@ -119,26 +119,33 @@
         id: "film-plakat",
         tittel: "Film plakat",
         bilde: "prosjekter/prosjekt-bilder/Filmplakat_above-the-law.jpg",
-        tekst: "Kort beskrivelse av prosjektet og teknologier brukt."
+        tekstfil: "prosjekter/film-plakat.txt"
       },
       {
         id: "portrett-intervju",
         tittel: "Portrett intervju",
         bilde: "prosjekter/prosjekt-bilder/1.png",
-        tekst: "Kort beskrivelse av prosjektet og teknologier brukt."
+        tekstfil: "prosjekter/portrett-intervju.txt"
       },
       {
         id: "øve-oppgaver",
         tittel: "Øve oppgaver",
         bilde: "prosjekter/prosjekt-bilder/øve-oppgave3.png",
-        tekst: "Kort beskrivelse av prosjektet og teknologier brukt."
+        tekstfil: "prosjekter/øve-oppgaver.txt"
       },
       {
         id: "github",
         tittel: "GitHub",
         ikon: "fab fa-github",
-        tekst: "Kort beskrivelse av prosjektet og teknologier brukt."
-      }
+        tekstfil: "prosjekter/github.txt"
+      },
+      {
+        id: "Khan Academy",
+        tittel: "Khan Academy",
+        bilde: "prosjekter/prosjekt-bilder/Khan_Academy.png",
+        tekstfil: "prosjekter/khan-academy.txt"
+      },
+      
     ];
 
     // Hent prosjekt-ID fra URL
@@ -162,13 +169,41 @@
         : `<i class="${prosjekt.ikon}" style="font-size:220px; color:#24292f; width:100%; height:450px; display:block; text-align:center; line-height:450px;"></i>`;
       document.querySelector('.bilde-kolonne').innerHTML = bildeHtml;
 
-      // Tittel og tekst
-      document.querySelector('.inhold').innerHTML = `
-        <h1>${prosjekt.tittel}</h1>
-        <p>${prosjekt.tekst}</p>
-      `;
+      // Hent tekst fra fil
+      fetch(prosjekt.tekstfil)
+        .then(response => response.text())
+        .then(data => {
+          const deler = data.split('---');
+          document.querySelector('.inhold').innerHTML = `
+            <h1>${prosjekt.tittel}</h1>
+            <p>${deler[0]}</p>
+          `;
+          if (deler[1]) {
+            // Del opp info-delen på linjeskift
+            const infoItems = deler[1].split('\n').filter(line => line.trim() !== '');
+            // Del opp i vanlige info og linker
+            const infoList = infoItems
+              .filter(item => !item.includes('<a'))
+              .map(item => `<li>${item}</li>`).join('');
+            const linkList = infoItems
+              .filter(item => item.includes('<a'))
+              .join('<br>');
+            // Vis liste og linker separat
+            document.querySelector('.info').innerHTML =
+              (infoList ? `<ul>${infoList}</ul>` : '') +
+              (linkList ? `<div>${linkList}</div>` : '');
+          } else {
+            document.querySelector('.info').innerHTML = "";
+          }
+        })
+        .catch(() => {
+          document.querySelector('.inhold').innerHTML = `
+            <h1>${prosjekt.tittel}</h1>
+            <p>Fant ikke prosjektbeskrivelse.</p>
+          `;
+        });
 
-      // Info-boks (du kan tilpasse denne)
+      // Info-boks
       document.querySelector('.info').innerHTML = `
         <p><strong>Teknologi:</strong> ${prosjekt.tittel.includes("GitHub") ? "GitHub" : "HTML, CSS, JS"}</p>
         <p><strong>År:</strong> 2024</p>
