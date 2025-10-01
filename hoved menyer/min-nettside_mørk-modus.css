@@ -42,3 +42,10 @@
             background: #3e7aa4;
         }
         }
+        a {
+    color: #3e7aa4;
+  background: #3c3f45;
+        }
+        a:hover {
+    background: #33363b;
+        }

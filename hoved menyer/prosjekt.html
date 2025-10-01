@@ -93,6 +93,7 @@
   <link rel="stylesheet" href="min-nettside_mørk-modus.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="prosjekter/min-nettside_styling-for-prosjekt-sider.css">
+  <link rel="stylesheet" href="min-nettside_styling.css">
 </head>
 <body>
   <ul id="knapper">
@@ -191,7 +192,7 @@
             // Vis liste og linker separat
             document.querySelector('.info').innerHTML =
               (infoList ? `<ul>${infoList}</ul>` : '') +
-              (linkList ? `<div>${linkList}</div>` : '');
+              (linkList ? `<div class="link">${linkList}</div>` : '');
           } else {
             document.querySelector('.info').innerHTML = "";
           }

@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="bilder/favicon-16x16.png">
     <link rel="stylesheet" href="min-nettside_lys-modus.css">
     <link rel="stylesheet" href="min-nettside_mørk-modus.css">
+    <link rel="stylesheet" href="min-nettside_styling.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -53,34 +54,6 @@
 }
 .kontakt:hover .kontakt-info h2 {
   color: #3e7aa4;
-}
-.kontakt-linker {
-  margin-top: 8px;
-  display: flex;
-  gap: 12px;
-}
-.kontakt-linker a {
-  text-decoration: none;
-  font-size: 1em;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: #3e7aa4;
-  background: #fff;
-  border-radius: 6px;
-  padding: 4px 10px;
-  box-shadow: 0 1px 4px rgba(62,122,164,0.07);
-  transition: background 0.2s, color 0.2s, transform 0.2s;
-}
-.kontakt-linker a:hover {
-  transform: scale(1.08);
-  text-decoration: none;
-}
-.kontakt-linker a i {
-  transition: color 0.2s, transform 0.2s;
-}
-.kontakt-linker a:hover i {
-  transform: rotate(-10deg) scale(1.2);
 }
 @media (max-width: 700px) {
   .kontakt {
@@ -130,18 +103,28 @@
     <div class="kontakt-info">
       <h2>Jan Olav</h2>
       <p>E-post: janolavgrimsrud@gmail.com</p>
-      <div class="kontakt-linker">
+      <div class="link">
         <a href="https://github.com/jangri09" target="_blank"><i class="fab fa-github"></i> GitHub</a>
       </div>
     </div>
   </div>
   <div class="kontakt">
-    <img src="kontakt-bilder/venn.jpg" alt="Venn">
+    <img src="kontakt-bilder/bjarte.jpg" alt="Bjarte">
     <div class="kontakt-info">
-      <h2>Venn</h2>
-      <p>E-post: venn@example.com</p>
-      <div class="kontakt-linker">
-        <a href="https://instagram.com/venn" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <h2>Bjarte</h2>
+      <p>E-post: bjarte@example.com</p>
+      <div class="link">
+        <a href="https://instagram.com/bjarte" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="kontakt">
+    <img src="kontakt-bilder/kåre.jpg" alt="Kåre">
+    <div class="kontakt-info">
+      <h2>Kåre</h2>
+      <p>E-post: kare@example.com</p>
+      <div class="link">
+        <a href="https://github.com/kåre" target="_blank"><i class="fab fa-github"></i> GitHub</a>
       </div>
     </div>
   </div>

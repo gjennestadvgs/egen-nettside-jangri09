@@ -1,0 +1,26 @@
+/* Felles styling for lenker med ikoner */
+.link a:hover i {
+  transform: rotate(-10deg) scale(1.2);
+}
+.link a {
+  text-decoration: none;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 6px;
+  padding: 4px 10px;
+  box-shadow: 0 1px 4px rgba(62,122,164,0.07);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.link a:hover {
+  transform: scale(1.08);
+  text-decoration: none;
+}
+/* Ikon-styling */
+.link a i {
+  transition: color 0.2s, transform 0.2s;
+}
+.link a:hover i {
+  transform: rotate(-10deg) scale(1.2);
+}

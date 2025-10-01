@@ -40,4 +40,11 @@ body {
         .kontakt:hover {
             background: #eaf0ff;
         }
+        a {
+              color: #3e7aa4;
+  background: #fff;
+        }
+        a:hover {
+    background: #eaf0ff;
+        }
 
