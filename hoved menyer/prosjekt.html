@@ -84,8 +84,8 @@
 }
   </style>
   <link rel="stylesheet" href="min-nettside_navigerings-bar.css">
-  <link rel="stylesheet" href="min-nettside_lys-modus.css">
   <link rel="stylesheet" href="min-nettside_mørk-modus.css">
+  <link rel="stylesheet" href="min-nettside_lys-modus.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="prosjekter/min-nettside_styling-for-prosjekt-sider.css">
   <link rel="stylesheet" href="min-nettside_styling.css">
@@ -170,9 +170,14 @@
         .then(response => response.text())
         .then(data => {
           const deler = data.split('---');
+          // Behold avsnitt: del opp på dobbel linjeskift og lag <p> for hvert
+          const avsnitt = deler[0]
+            .split(/\n\s*\n/) // Del på tom linje (avsnitt)
+            .map(a => `<p>${a.trim()}</p>`)
+            .join('');
           document.querySelector('.inhold').innerHTML = `
             <h1>${prosjekt.tittel}</h1>
-            <p>${deler[0]}</p>
+            ${avsnitt}
           `;
           if (deler[1]) {
             // Del opp info-delen på linjeskift
