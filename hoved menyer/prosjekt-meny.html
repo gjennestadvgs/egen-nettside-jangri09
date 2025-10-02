@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Jan Olav</title>
+    <link rel="stylesheet" href="css/mobil.css">
     <style>
         /* dette er inspirert av KI*/
         /* Stil for selve rutenettet */
@@ -50,17 +51,6 @@
   opacity: 0;
   transition: opacity 0.5s;
 }
-/* mindre grid på mindre skjerm*/
-@media (max-width: 800px) {
-  .prosjekt-oversikt {
-    grid-template-columns: repeat(2, 1fr) ; /* Én kolonne på små skjermer */
-  }
-}
-@media (max-width: 500px) {
-  .prosjekt-oversikt {
-    grid-template-columns: 1fr; /* Én kolonne på små skjermer */
-  }
-}
         </style>
         <link rel="stylesheet" href="css/lys-modus.css">
         <link rel="stylesheet" href="css/mørk-modus.css">
@@ -73,11 +63,11 @@
     <!-- navigeringsmeny -->
    <ul id="knapper">
   <li class="logo">
-    <a href="forside.html">
+    <a href="index.html">
       <img src="bilder/logo.png" alt="Logo" class="nav-logo">
     </a>
   </li>
-  <li><a id="homeButton" href="forside.html" class="active"><i class="fa fa-home"></i></a></li>
+  <li><a id="homeButton" href="index.html" class="active"><i class="fa fa-home"></i></a></li>
   <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
   </ul>
 
@@ -141,15 +131,7 @@
       }, 500); // Samme tid som transition
     });
   });
-
-  document.getElementById('menuButton').addEventListener('click', function() {
-    var menuContent = document.getElementById('menuContent');
-    if (menuContent.classList.contains('hidden')) {
-      menuContent.classList.remove('hidden');
-    } else {
-      menuContent.classList.add('hidden');
-    }
-  });
 </script>
+<script src="Js/menu.js"></script>
 </body>
 </html>

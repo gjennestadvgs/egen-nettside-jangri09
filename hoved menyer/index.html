@@ -68,11 +68,11 @@
 <body>
    <ul id="knapper">
   <li class="logo">
-    <a href="forside.html">
+    <a href="index.html">
       <img src="bilder/logo.png" alt="Logo" class="nav-logo">
     </a>
   </li>
-  <li><a id="homeButton" href="forside.html" class="active"><i class="fa fa-home"></i></a></li>
+  <li><a id="homeButton" href="index.html" class="active"><i class="fa fa-home"></i></a></li>
   <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
   </ul>
   
@@ -93,15 +93,8 @@
   </div>
     <button id="lede-knapp" onclick="window.location.href='om-meg.html'">Hvem er jeg?</button>
   </div>
-<script>
-    document.getElementById('menuButton').addEventListener('click', function() {
-        var menuContent = document.getElementById('menuContent');
-        if (menuContent.classList.contains('hidden')) {
-            menuContent.classList.remove('hidden');
-        } else {
-            menuContent.classList.add('hidden');
-        }
-    });
+<script 
+src="Js/menu.js">
 </script>
 </body>
 </html>

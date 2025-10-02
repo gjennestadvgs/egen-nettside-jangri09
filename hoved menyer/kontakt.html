@@ -1,135 +1,121 @@
+<!doctype html>
 <html>
 <head>
-    <title>Jan Olav</title>
-    <style>
-.kontakt-liste {
-  max-width: 700px;
-  margin: 80px auto 40px auto; /* Øk margin-top for mer avstand */
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-.kontakt {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  border-radius: 10px;
-  padding: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-.kontakt:hover {
-  box-shadow: 0 8px 24px rgba(62,122,164,0.18);
-  transform: translateY(-2px) scale(1.03);
-}
-.kontakt img {
+  <title>Jan Olav</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/mobil.css">
+  <link rel="stylesheet" href="css/lys-modus.css">
+  <link rel="stylesheet" href="css/mørk-modus.css">
+  <link rel="stylesheet" href="css/navigerings-bar.css">
+  <link rel="stylesheet" href="css/styling.css">
+  <link rel="stylesheet" href="css/lightbox.css">
+  <link rel="icon" type="image/png" href="bilder/favicon-16x16.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    .contact-list {
+      max-width: 700px;
+      margin: 80px auto 40px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .contact {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact:hover {
+      box-shadow: 0 8px 24px rgba(62,122,164,0.18);
+      transform: translateY(-2px) scale(1.03);
+    }
+    .contact:hover img {
+      transform: scale(1.08) rotate(-4deg);
+    }
+    .contact-info h2 {
+      margin: 0 0 8px 0;
+      font-size: 1.2em;
+      transition: color 0.2s;
+    }
+    .contact img {
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border-radius: 50%;
   border: 2px solid #7389f6;
+  border-radius: 50%;
   transition: border-color 0.2s, transform 0.2s;
 }
-.kontakt:hover img {
-  transform: scale(1.08) rotate(-4deg);
-}
-.kontakt-info h2 {
-  margin: 0 0 8px 0;
-  font-size: 1.2em;
-  transition: color 0.2s;
-}
-.kontakt:hover .kontakt-info h2 {
-  color: #3e7aa4;
-}
-@media (max-width: 700px) {
-  .kontakt {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .kontakt img {
-    width: 64px;
-    height: 64px;
-  }
-}
-
-    </style>
-    <link rel="stylesheet" href="css/lys-modus.css">
-    <link rel="stylesheet" href="css/mørk-modus.css">
-    <link rel="stylesheet" href="css/navigerings-bar.css">
-    <link rel="stylesheet" href="css/styling.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="icon" type="image/png" href="bilder/favicon-16x16.png">
+    .contact:hover .contact-info h2 {
+      color: #3e7aa4;
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigeringsknapper -->
-   <ul id="knapper">
+  <!-- Navigation bar -->
+<ul id="knapper">
   <li class="logo">
-    <a href="forside.html">
+    <a href="index.html">
       <img src="bilder/logo.png" alt="Logo" class="nav-logo">
     </a>
   </li>
-  <li><a id="homeButton" href="forside.html" class="active"><i class="fa fa-home"></i></a></li>
+  <li><a id="homeButton" href="index.html" class="active"><i class="fa fa-home"></i></a></li>
   <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
   </ul>
   
 
 <div id="menuContent" class="hidden">
   <ul>
-    <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
     <li><a href="om-meg.html">Om meg</a></li>
     <li><a href="prosjekt-meny.html">Prosjekter</a></li>
   </ul>
 </div>
-<script>
-    document.getElementById('menuButton').addEventListener('click', function() {
-        var menuContent = document.getElementById('menuContent');
-        if (menuContent.classList.contains('hidden')) {
-            menuContent.classList.remove('hidden');
-        } else {
-            menuContent.classList.add('hidden');
-        }
-    });
-</script>
-<!-- Kontaktliste -->
-<!-- laget av KI-->
-<div class="kontakt-liste">
-  <div class="kontakt">
-    <img src="bilder/profil-bilde.jpg" alt="Jan Olav">
-    <div class="kontakt-info">
-      <h2>Jan Olav</h2>
-      <p>E-post: janolavgrimsrud@gmail.com</p>
-      <div class="link">
-        <a href="https://github.com/jangri09" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+  <!-- Contact list -->
+  <div class="contact-list">
+    <div class="contact">
+      <img src="bilder/profil-bilde.jpg" alt="Jan Olav" onclick="showLightbox(this.src)">
+      <div class="contact-info">
+        <h2>Jan Olav</h2> 
+        <p>E-mail: janolavgrimsrud@gmail.com</p>
+        <div class="link">
+          <a href="https://github.com/jangri09" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="kontakt">
-    <img src="kontakt-bilder/bjarte.jpg" alt="Bjarte">
-    <div class="kontakt-info">
-      <h2>Bjarte</h2>
-      <p>E-post: bjarte@example.com</p>
-      <div class="link">
-        <a href="https://instagram.com/bjarte" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <div class="contact">
+      <img src="kontakt-bilder/bjarte.jpg" alt="Bjarte" onclick="showLightbox(this.src)">
+      <div class="contact-info">
+        <h2>Bjarte</h2>
+        <p>E-mail: bjarte@example.com</p>
+        <div class="link">
+          <a href="https://instagram.com/bjarte" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="kontakt">
-    <img src="kontakt-bilder/kåre.jpg" alt="Kåre">
-    <div class="kontakt-info">
-      <h2>Kåre</h2>
-      <p>E-post: kare@example.com</p>
-      <div class="link">
-        <a href="https://github.com/kåre" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <div class="contact">
+      <img src="kontakt-bilder/kåre.jpg" alt="Kåre" onclick="showLightbox(this.src)">
+      <div class="contact-info">
+        <h2>Kåre</h2>
+        <p>E-mail: kare@example.com</p>
+        <div class="link">
+          <a href="https://github.com/kåre" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
       </div>
     </div>
+    <!-- Add more contacts here -->
   </div>
-  <!-- Legg til flere kontakter her -->
-</div>
-
-
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" style="display:none;">
+    <button class="close-btn" onclick="closeLightbox()">×</button>
+    <img id="lightbox-img" src="" alt="Large image">
+  </div>
+  <script src="Js/menu.js"></script>
+  <script src="Js/lightbox.js"></script>
 </body>
 </html>

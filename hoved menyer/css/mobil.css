@@ -1,0 +1,85 @@
+/* prosjekt kort grid */
+@media (max-width: 800px) {
+  .prosjekt-oversikt {
+    grid-template-columns: repeat(2, 1fr) ; /* Én kolonne på små skjermer */
+  }
+}
+@media (max-width: 500px) {
+  .prosjekt-oversikt {
+    grid-template-columns: 1fr; /* Én kolonne på små skjermer */
+  }
+}
+/* prosjekt side styling */
+@media (max-width: 700px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .bilde-kolonne {
+        order: 1;
+        margin: 0 auto 16px auto;
+    }
+    .inhold {
+        order: 2;
+        max-width: 95vw;
+        margin: 0 auto;
+    }
+    .info {
+        order: 3;
+        width: 95vw;
+        margin: 20px auto 0 auto;
+        padding: 16px;
+        font-size: 1em;
+        border-radius: 8px;
+        box-sizing: border-box;
+        overflow-y: visible;
+        max-height: 40vh;
+        z-index: 10;
+        position: static;
+    }
+    .bilde-kolonne img,
+    .bilde-kolonne i.fab.fa-github {
+        width: 80vw;
+        max-width: 200px;
+        font-size: 18vw;
+        padding: 16px 0;
+    }
+}
+/* om meg grid */
+        @media (max-width: 700px) {
+            .om-meg-grid {
+                grid-template-columns: 1fr; /* Kun én kolonne på mobil */
+                gap: 16px;
+                padding: 0 4vw;
+            }
+            .om-meg-container,
+            .om-meg-container.large,
+            .om-meg-container.small,
+            .om-meg-container.xxl {
+                grid-column: span 1 !important; /* Tving alle til én kolonne */
+                min-height: 220px;
+                padding: 16px 8px;
+            }
+            .xxl-innhold {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .xxl-bilde {
+                width: 90%;
+                max-width: 100%;
+                margin-left: 0;
+            }
+        }
+/* kontakt grid */
+         @media (max-width: 700px) {
+      .contact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .contact img {
+        width: 64px;
+        height: 64px;
+      }
+    }
