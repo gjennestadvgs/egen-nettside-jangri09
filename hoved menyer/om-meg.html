@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+<head>
+    <title>Jan Olav | Om meg</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/mobil.css">
+    <link rel="stylesheet" href="css/lys-modus.css">
+    <link rel="stylesheet" href="css/mørk-modus.css">
+    <link rel="stylesheet" href="css/navigerings-bar.css">
+    <link rel="stylesheet" href="css/styling.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="bilder/logo_hvit.png">
+    <style>
+.hero-section {
+    display: grid;
+    /* Definerer tre kolonner med omtrentlig bredde */
+    grid-template-columns: 1fr 1.2fr 0.5fr; 
+    gap: 20px;
+    align-items: center; /* Vertikal sentrering av innholdet */
+}
+ .middle-image img {
+    width: 100%;
+    max-width: 400px; /* Juster størrelsen */
+    height: auto;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    object-fit: cover;
+}
+.stat .number {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+}
+h1 {
+    font-size: 5em; /* Stor skrift */
+    font-weight: 900; /* Ekstra fet */
+    line-height: 1.0;
+    /* Bruk en annen font for '& Brand' for å få den kursive effekten */
+}
+p {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.left-content h1,
+.left-content p {
+  margin: 0;
+  padding: 0;
+}
+.left-content p {
+  margin-bottom: 4px; /* evt. litt luft under p hvis ønsket */
+}
+.om-meg-høyre .stat {
+  margin-bottom: 24px; /* Juster verdien etter ønsket avstand */
+  text-align: right;
+  margin-right: 20px;
+}
+.om-meg-høyre .stat:last-child {
+  margin-bottom: 0; /* Ingen margin under siste stat */
+}
+.hobby-section {
+  max-width: 1100px;
+  margin: 64px auto 0 auto;
+  padding: 0 16px;
+}
+.hobby-title {
+  flex: 1;
+  min-width: 160px;
+}
+.hobby-title h2 {
+  font-size: 2em;
+  margin: 0 0 32px 0;
+  text-align: left;
+}
+.hobby-boxes {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 32px;
+}
+.hobby-box {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 24px 18px;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1em;
+  transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+  cursor: pointer;
+}
+.hobby-box i {
+  font-size: 2em;
+  color: #7389f6;
+  transition: color 0.2s, transform 0.3s;
+}
+.hobby-box.effect:hover i,
+.hobby-box.effect:focus i {
+  color: #3e7aa4;
+  transform: scale(1.12) rotate(-8deg);
+}
+.om-meg-beskrivelse {
+  max-width: 800px;
+  margin: 48px auto 0 auto;
+  padding: 0 16px;
+}
+.beskrivelse-innhold h2 {
+  font-size: 1.7em;
+  margin-bottom: 12px;
+  text-align: left;
+}
+.beskrivelse-innhold p {
+  font-size: 1.15em;
+  margin: 0;
+  line-height: 1.5;
+}
+.hobby-og-beskrivelse {
+  display: flex;
+  gap: 48px;
+  max-width: 1100px;
+  margin: 64px auto 0 auto;
+  align-items: flex-start;
+  padding: 0 16px;
+}
+.hobby-venstre {
+  flex: 2;
+  min-width: 0;
+}
+.beskrivelse-høyre {
+  flex: 1;
+  min-width: 220px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.beskrivelse-innhold {
+    position: absolute;
+    right: 20px;
+  padding: 24px 18px;
+  max-width: 500px;
+}
+.beskrivelse-innhold h2 {
+  font-size: 1.3em;
+  margin-bottom: 12px;
+  text-align: left;
+}
+.beskrivelse-innhold p {
+  font-size: 1.05em;
+  margin: 0;
+  line-height: 1.6;
+}
+    </style>
+</head>
+<body>
+   <!-- Navigation bar -->
+   <ul id="knapper">
+      <li class="logo">
+        <a href="index.html">
+          <img src="bilder/logo_hvit.png" alt="Logo" class="nav-logo">
+        </a>
+      </li>
+      <li><a id="homeButton" href="index.html" class="active"><i class="fa fa-home"></i></a></li>
+      <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
+   </ul>
+   <div id="menuContent" class="hidden">
+      <ul>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="om-meg.html">Om meg</a></li>
+        <li><a href="prosjekt-meny.html">Prosjekter</a></li>
+      </ul>
+   </div>
+    <main class="hero-section">
+        <div class="left-content">
+            <p>Hei, jeg er Jan Olav</p>
+            <h1>En elev på<br>Gjennestad<br>VGS</h1>
+        </div>
+
+        <div class="middle-image">
+            <img src="bilder/profil-bilde.jpg" alt="Bilde av Jan Olav" onclick="showLightbox(this.src)">
+        </div>
+
+        <div class="om-meg-høyre">
+            <div class="stat">
+                <span class="number">16</span>
+                <span class="label">År</span>
+            </div>
+            <div class="stat">
+                <span class="number">Begnadalen</span>
+                <span class="label">Hjemsted</span>
+            </div>
+            <div class="stat">
+                <span class="number">Design</span>
+                <span class="label">Interesse</span>
+            </div>
+        </div>
+    </main>
+    <section class="hobby-section">
+  <div class="hobby-title">
+    <h2>Mine hobbier</h2>
+  </div>
+  <div class="hobby-boxes">
+    <div class="hobby-box effect">
+      <i class="fa fa-paint-brush"></i>
+      <span>Design</span>
+    </div>
+    <div class="hobby-box effect">
+      <i class="fa fa-tree"></i>
+      <span>Treskjæring</span>
+    </div>
+    <div class="hobby-box effect">
+      <i class="fa fa-drum"></i>
+      <span>Trommer</span>
+    </div>
+    <div class="hobby-box effect">
+      <i class="fa fa-microchip"></i>
+      <span>Teknologi</span>
+    </div>
+    <div class="hobby-box effect">
+      <i class="fa fa-mountain"></i>
+      <span>Friluftsliv</span>
+    </div>
+  </div>
+  <div class="beskrivelse-innhold">
+    <h2>Om meg</h2>
+    <p>
+      Jeg heter Jan Olav og går på Gjennestad VGS på linjen IM (Informasjonsteknologi og medieproduksjon).  
+      Jeg er nysgjerrig, kreativ og liker å lære nye ting – spesielt innen design, teknologi og foto.
+    </p>
+  </div>
+</section>
+</body>
+</html>
+   <!-- Lightbox container -->
+   <div class="lightbox" id="lightbox" style="display:none;">
+      <button class="close-btn" onclick="closeLightbox()" style="position:absolute;top:32px;right:48px;font-size:2em;color:#fff;background:none;border:none;cursor:pointer;">×</button>
+      <img id="lightbox-img" src="" alt="Large image" style="max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 0 24px #000;">
+   </div>
+   <script src="Js/menu.js"></script>
+   <script src="Js/lightbox.js"></script>
+   <script src="Js/icon-color.js"></script>
+</body>
+</html>

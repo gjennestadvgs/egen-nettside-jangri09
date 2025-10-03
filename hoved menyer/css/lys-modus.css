@@ -1,0 +1,57 @@
+body {
+            background: #edf5ff; /* bakgrunnsfarge */
+}
+        h1, h2, h3, p, a, span, button, .back-button, .info {
+          color: #1c1c1c; /* tekstfarge */
+        }
+        ul#knapper {
+            background: #20618f; /* bakgrunnsfarge på navigasjonsbaren */
+        }
+        #knapper li a {
+            color: white; /* tekstfarge på knappene til navigasjonsbaren */
+        }
+        #knapper li a::before,
+        #menuContent li a::before {
+              background: rgba(115,137,246,0.18); /* Lys blå sirkel */
+        }
+        .prosjekt-kort {
+        background-color: #ffffff; /* Bakgrunnsfarge på prosjekt kortene */
+        }
+        #lede-knapp {
+        background-color: #20618f; /* Bakgrunnsfarge på hovedmeny knappen */
+        color: white; /* Tekstfarge på hovedmeny knappen */
+        border: 0.4px solid #184f76; /* Kantfarge på hovedmeny knappen */
+        }
+        .info {
+                background: #dee5f0; /* Bakgrunnsfarge på boksen */
+        }
+        #menuContent {
+        border: 1px solid #184f76; /* Kantfarge på dropdown menyen */
+        background-color: #20618f; /* Bakgrunnsfarge på dropdown menyen */
+        }
+        #menuContent li a {
+        color: white; /* Tekstfarge på lenkene i dropdown menyen */
+        }
+        .card-color,
+        .project-card i.fab.fa-github {
+        background: #ffffff; /* Bakgrunnsfarge på kontakt boksen */
+        }
+        .hover-color:hover {
+        background: #eaf0ff; /* Bakgrunnsfarge ved hover på kontakt boksen */
+        }
+        .hover-color:hover h2,
+        .hover-color:hover h1 {
+        color: #3e7aa4; /* Tekstfarge ved hover på kontakt boksen */
+        }
+        /* farge linker */
+        .link a {
+        color: #3e7aa4;
+        background: #fff;
+        }
+        .link a:hover {
+        background: #ffffff;
+        }
+        .link a:visited {
+        color: #3e7aa4;   
+        }
+

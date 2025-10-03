@@ -1,0 +1,26 @@
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+}
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 0 24px #000;
+}
+.close-btn {
+  position: absolute;
+  top: 32px;
+  right: 48px;
+  font-size: 2em;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+}

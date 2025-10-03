@@ -1,0 +1,14 @@
+Jeg har jobbet bevisst med å utnytte GitHub-funksjonene for å gjøre profilen min engasjerende og informativ. Først og fremst handler det om oversikten. Jeg sørger for at de viktigste ferdighetene mine – som erfaringen med HTML, CSS og andre språk jeg lærer – er synlige gjennom de repositoriene jeg velger å pinne (feste).
+
+Utfordringen: Fra Kaos til Klart Budskap
+Den største utfordringen var å gå fra å bruke GitHub som et rent kode-lager til å bruke det som en presentasjonsplass. I starten var det bare en haug med uorganiserte mapper. Nå har jeg lært å dokumentere arbeidet mitt bedre. Hvert prosjekt får en ordentlig README-fil som forklarer hva prosjektet gjør, hvilke teknologier som er brukt, og hvilke utfordringer jeg løste.
+
+Jeg har også brukt funksjonen for å lage en spesiell README direkte på selve profilsiden. Dette gir meg muligheten til å skrive en kort introduksjon om meg selv, mine ambisjoner og hva jeg jobber med for øyeblikket. Det er en fin måte å gi besøkende et øyeblikksbilde av hvem jeg er, uten at de må dykke inn i all koden med én gang.
+
+Å ha en ryddig og oppdatert GitHub-profil er helt essensielt i læringsprosessen. Det tvinger meg til å fullføre prosjekter ordentlig og presentere dem profesjonelt. Det er min måte å vise at jeg ikke bare kan kode, men at jeg også kan samarbeide og dokumentere – ferdigheter som er avgjørende i bransjen.
+
+---
+Av: Jan Olav
+Dato: 01.10.2025
+Linker:
+<a href="https://github.com/jangri09/jangri09" target="_blank">GitHub</a>

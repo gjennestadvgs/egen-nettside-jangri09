@@ -1,0 +1,10 @@
+Jeg har nylig fullført et spennende prosjekt på Khan Academy hvor vi skulle lære det grunnleggende innen HTML og CSS. Dette var min inngangsport til webutvikling, og det var utrolig lærerikt å se hvordan to så forskjellige språk jobber sammen for å bygge en nettside.
+
+HTML var selve fundamentet. Jeg lærte raskt å tenke i elementer og struktur – å definere overskrifter, avsnitt og lenker. Dette var den ryddige delen av jobben, der jeg skapte "skjelettet" til det jeg ville bygge.
+
+Utfordringen kom da jeg begynte med CSS. Dette var språket for design og stil, og plutselig måtte jeg lære å kontrollere farger, fonter og, viktigst av alt, layout. Det var utrolig frustrerende i starten når et lite kolon eller en feil definert "margin" kunne få hele siden til å se kaotisk ut. Kampen med å få elementer til å ligge akkurat der jeg ville, og ikke bare stable seg oppå hverandre, var den største kneika.
+
+Men gjennom øvelser og gjentatt feilsøking lærte jeg meg raskt viktigheten av å være nøyaktig. Det var utrolig givende da jeg endelig fikk HTML-strukturen og CSS-stilen til å synkronisere, og den tomme siden plutselig ble til et fungerende, stilisert produkt. Hele prosjektet ga meg en dyp forståelse for at god design på nettet starter med solid, ryddig kode.
+---
+Av: Jan Olav
+Dato: 3 september 2025

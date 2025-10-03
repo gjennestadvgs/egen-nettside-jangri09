@@ -1,0 +1,162 @@
+/* hva som skjer med aktiv side */
+ 
+body {
+  margin-top: 56px; /* Juster etter høyden på navigeringsbaren */
+
+}
+#knapper .menuContent li a.active {
+text-decoration: underline;
+  }
+ /* navigerings bar */
+  #knapper {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1004;
+  font-size: 20px;
+  font-family: Britannic, sans-serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 56px;
+}
+    
+#knapper li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#knapper li a,
+#menuContent li a {
+  margin-right: 10px;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#knapper li a::before,
+#menuContent li a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.35s cubic-bezier(.4,0,.2,1), height 0.35s cubic-bezier(.4,0,.2,1), opacity 0.2s;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+#knapper li a:hover::before,
+#menuContent li a:hover::before {
+  width: 120%;
+  height: 220%;
+  opacity: 1;
+}
+
+#knapper li a:hover,
+#menuContent li a:hover {
+
+  transition: color 0.2s;
+}
+
+#knapper li a.active {
+  text-decoration: underline;
+}
+
+#menuContent {
+  font-size: 18px;
+  font-family: Britannic, sans-serif;
+  position: fixed;
+  top: 56px;
+  right: 0;
+  z-index: 1003;
+  padding: 0;
+  min-width: 180px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#menuContent.hidden {
+  display: none;
+}
+
+#menuContent ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menuContent li {
+  margin: 0;
+  padding: 0;
+}
+
+#knapper .logo {
+  margin-right: auto; /* Skyver logoen til venstre */
+  padding-left: 12px;
+}
+
+.nav-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#knapper .logo a:hover,
+#knapper .logo a:active {
+  background: none !important;
+  color: inherit !important;
+}
+
+#knapper .logo a::before {
+  display: none !important;
+}
+
+#knapper .logo img,
+.nav-logo:hover,
+.nav-logo:active {
+  filter: none;
+  background: none;
+}
+
+@media (max-width: 700px) {
+  #knapper {
+    font-size: 18px;
+    height: 56px;
+    padding: 0 4px;
+    justify-content: flex-end; /* Endre fra flex-start til flex-end */
+  }
+  #knapper li a,
+  #menuContent li a {
+    padding: 10px 8px;
+    font-size: 16px;
+  }
+  #menuContent {
+    font-size: 16px;
+    min-width: 120px;
+    top: 48px;
+    right: 0;
+    border-radius: 0 0 10px 10px;
+  }
+}
+

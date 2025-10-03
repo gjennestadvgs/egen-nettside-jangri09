@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+<head>
+    <title>Jan Olav</title>
+    <style>
+      #meny-bilde {
+        width: 100%;
+        display: block;
+        position: relative;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        z-index: 1;
+      }
+      #tekst-over-bilde {
+        margin-left: 10px;
+        position: absolute;
+        top: 16%;
+        text-align: left;
+        z-index: 2;
+      }
+      #hjem-overskrift {
+        font-size: 2.5em;
+        color: white;
+      }
+      #forside-beskrivelse {
+        font-size: 1.2em;
+        max-width: 600px;
+        text-align: left;
+        color: white;
+      }
+      .forside-prosjekter {
+        max-width: 1100px;
+        margin: 40px auto 0 auto;
+        padding-top: 32px;
+      }
+      .forside-prosjekter-tekst {
+        text-align: left;
+        margin-left: 10px;
+      }
+      .project-card {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s, transform 0.3s;
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        max-width: 330px;
+        min-width: 280px; 
+        flex: 0 0 220px;  
+      }
+      .project-card img {
+        width: 100%;
+        height: 350px;    /* Mindre høyde på bildet */
+        object-fit: cover;
+        display: block;
+      }
+      .project-card h3 {
+        margin-bottom: 2px;
+        padding-bottom: 5px;
+        padding-left: 4px;
+      }
+      .project-card p {
+        padding-top: 0;
+        margin-top: 0;
+        padding-bottom: 5px;
+        padding-left: 4px;
+      }
+      .project-grid {
+        display: flex;
+        gap: 20px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+      }
+      .vis-flere-knapp {
+  margin: 24px 0 0 auto;
+  display: block;
+  padding: 10px 28px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.vis-flere-knapp:hover,
+.vis-flere-knapp:focus {
+  box-shadow: 0 8px 24px rgba(62,122,164,0.18);
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+}
+.vis-flere-knapp i {
+  margin-left: 8px;
+}
+    .forside-nyheter {
+      width: 100%;
+    }
+    .forside-nyheter h2 {
+      margin-bottom: 24px;
+      font-size: 2em;
+      text-align: center;
+      margin-left: 0;
+    }
+    .nyhet {
+      background-color: #000000;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 32px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 24px;
+      justify-content: space-between;
+    }
+    .nyhet-tekst {
+      flex: 1;
+      max-width: 300px;
+    }
+    .forside-nyheter .nyhet-tekst h2 {
+      margin-left: 30px;
+      margin-bottom: 24px;
+      font-size: 2em;
+      text-align: left;
+      color: #ffffff;
+    }
+    .forside-nyheter .nyhet-tekst p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-left: 30px;
+      color: #ffffff;
+    }
+    .nyhet-bilde {
+      width: 700px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-left: 24px;
+    }
+    .om-meg-boks {
+  max-width: 450px;
+  margin: 32px 0 0 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+  display: block;
+  display:flex; 
+  align-items:center; 
+  gap:18px; 
+  padding:24px;
+}
+.om-meg-bilde {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #7389f6;
+}
+.kontakt-boks {
+  max-width: 450px;
+  margin: 32px 0 0 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+  display: block;
+  display:flex; 
+  align-items:center; 
+  gap:18px; 
+  padding:24px;
+}
+.forside-info-bokser {
+  display: flex;
+  gap: 55px;
+  justify-content: center;
+  margin: 32px 0 10px 10px;
+  flex-wrap: wrap;
+}
+.om-meg-boks,
+.kontakt-boks {
+  flex: 1 1 320px;
+  min-width: 220px;
+  max-width: 450px;
+}
+.scrolling-box {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+@media (max-width: 768px) {
+  #tekst-over-bilde {
+    position: relative;
+  }
+    .nyhet {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+  }
+  .nyhet-bilde {
+    width: 80vw;
+    max-width: 500px;
+    margin: 16px 0 0 0;
+  }
+  .nyhet-tekst {
+    max-width: 100%;
+  }
+}
+    </style>
+        <link rel="stylesheet" href="css/lightbox.css">
+        <link rel="stylesheet" href="css/hover.css">
+        <link rel="stylesheet" href="css/mobil.css">
+        <link rel="stylesheet" href="css/lys-modus.css">
+        <link rel="stylesheet" href="css/mørk-modus.css">
+        <link rel="stylesheet" href="css/navigerings-bar.css">
+        <link rel="stylesheet" href="css/styling.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="icon" type="image/png" href="bilder/logo_hvit.png">
+</head>
+<body>
+   <ul id="knapper">
+  <li class="logo">
+    <a href="index.html">
+      <img src="bilder/logo_hvit.png" alt="Logo" class="nav-logo">
+    </a>
+  </li>
+  <li><a id="homeButton" href="index.html" class="active"><i class="fa fa-home"></i></a></li>
+  <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
+  </ul>
+  
+
+<div id="menuContent" class="hidden">
+  <ul>
+        <li><a href="kontakt.html">Kontakt</a></li>
+    <li><a href="om-meg.html">Om meg</a></li>
+    <li><a href="prosjekt-meny.html">Prosjekter</a></li>
+  </ul>
+</div>
+  <img src="bilder/meny-bilde.jpg" id="meny-bilde" alt="utsikt over fjell">
+
+  <div id="tekst-over-bilde">
+    <h1 id="hjem-overskrift">Velkommen til min nettside!</h1>
+    <p id="forside-beskrivelse">Dette er forsiden av min personlige nettside. Her kan du finne informasjon om meg og mine prosjekter.</p>
+  </div>
+<div class="scrolling-box">
+  <div class="forside-prosjekter">
+    <div class="forside-prosjekter-tekst">
+      <h2>Mine prosjekter</h2>
+    </div>
+    <div class="project-grid">
+      <a href="prosjekt.html?id=film-plakat" class="project-card card-color effect-color effect">
+        <img src="bilder/prosjekt-bilder/Filmplakat_above-the-law.jpg" alt="Film plakat">
+        <h3>Film plakat</h3>
+        <p>Minimalistisk, interaktivt selvportrett som speiler min personlighet.</p>
+      </a>
+      <a href="prosjekt.html?id=portrett-intervju" class="project-card card-color effect-color effect">
+        <img src="bilder/prosjekt-bilder/portrett-intervju.png" alt="Portrett intervju">
+        <h3>Portrett intervju</h3>
+        <p>RAW-filer og Photoshop for dramatiske og estetiske bilder.</p>
+      </a>
+      <a href="prosjekt.html?id=øve-oppgaver" class="project-card card-color effect-color effect">
+        <img src="bilder/prosjekt-bilder/øve-oppgave.png" alt="Photoshop bilde">
+        <h3>Øve oppgaver</h3>
+        <p>Øvingsoppgaver i Photoshop for å forbedre bildebehandling.</p>
+      </a>
+      <button class="vis-flere-knapp card-color effect-color" onclick="window.location.href='prosjekt-meny.html'">
+  Vis flere prosjekter <i class="fa fa-arrow-right"></i>
+</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="forside-nyheter">
+  <h2>Nyheter</h2>
+  <div class="nyhet">
+      <div class="nyhet-tekst">
+      <h2>Nettsiden er åpen!</h2>
+      <p>Etter en lang og grundig prosess er nettsiden endelig åpen for publikum!</p>
+    </div>
+    <img src="bilder/nyhet.png" alt="Nyhet" class="nyhet-bilde" onclick="showLightbox(this.src)">
+  </div>
+  <!-- Du kan legge til flere nyheter her -->
+</div>
+</div>
+<div class="forside-info-bokser">
+  <a href="om-meg.html" class="om-meg-boks card-color effect-color effect">
+    <img src="bilder/profil-bilde.jpg" alt="Jan Olav" class="om-meg-bilde">
+    <div>
+      <h2>Om meg</h2>
+      <p>Les mer om hvem jeg er og hva jeg gjør.</p>
+    </div>
+  </a>
+  <a href="kontakt.html" class="kontakt-boks card-color effect-color effect">
+    <i class="fa fa-user" style="font-size:2.2em; color:#7389f6;"></i>
+    <div>
+      <h2>Kontakt</h2>
+      <p>Ta kontakt for mer informasjon.</p>
+    </div>
+  </a>
+</div>
+   <!-- Lightbox container -->
+   <div class="lightbox" id="lightbox" style="display:none;">
+      <button class="close-btn" onclick="closeLightbox()" style="position:absolute;top:32px;right:48px;font-size:2em;color:#fff;background:none;border:none;cursor:pointer;">×</button>
+      <img id="lightbox-img" src="" alt="Large image" style="max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 0 24px #000;">
+<script src="Js/lightbox.js"></script>
+<script src="Js/menu.js"></script>
+<script src="Js/icon-color.js"></script>
+</body>
+</html>
