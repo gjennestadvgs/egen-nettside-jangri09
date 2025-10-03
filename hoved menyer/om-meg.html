@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Jan Olav | Om meg</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/hover.css">
     <link rel="stylesheet" href="css/mobil.css">
     <link rel="stylesheet" href="css/lys-modus.css">
     <link rel="stylesheet" href="css/mørk-modus.css">
@@ -15,26 +17,24 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
-            max-width: 1200px;
-            margin: 80px auto 40px auto;
+            margin-top: 80px;
         }
         .om-meg-container {
-            border-radius: 12px;
+            border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            transition: box-shadow 0.2s, transform 0.2s;
+            position: relative;
+            overflow: hidden;
             padding: 36px 24px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* Forskjellig størrelse med grid-row/column span */
         }
         .om-meg-container.xxl {
             grid-column: span 3;
             min-height: 300px;
-            height: auto;
             text-align: left;
             align-items: flex-start;
-            display: flex;
-            flex-direction: column;
         }
         .om-meg-container.xxl h1,
         .om-meg-container.xxl p {
@@ -43,12 +43,10 @@
         .om-meg-container.large {
             grid-column: span 2;
             min-height: 300px;
-            height: auto;
         }
         .om-meg-container.small {
             min-height: 220px;
             padding: 20px 12px;
-            height: auto;
         }
         .om-meg-bilde {
             width: 100px;
@@ -66,39 +64,25 @@
         .om-meg-tekst p {
             text-align: center;
         }
+        /* Hover kun på klikkbare bokser */
         .om-meg-knapp {
-            cursor: pointer;
-            transition: box-shadow 0.2s, background 0.2s, transform 0.2s;
-            text-decoration: none;
-            color: inherit;
-            box-shadow: 0 2px 8px rgba(62,122,164,0.07);
+            transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
             position: relative;
-        }
-        .om-meg-knapp:hover,
-        .om-meg-knapp:focus {
-            background: #dbe7ff;
-            box-shadow: 0 4px 16px rgba(62,122,164,0.15);
-            transform: translateY(-2px) scale(1.03);
-            outline: none;
+            z-index: 1;
+            overflow: hidden;
         }
         .om-meg-knapp i {
             font-size: 2.5em;
             color: #3e7aa4;
             margin-bottom: 10px;
-            transition: color 0.2s, transform 0.2s;
+            transition: color 0.2s, transform 0.3s;
         }
         .om-meg-knapp:hover i,
         .om-meg-knapp:focus i {
-            transform: scale(1.1) rotate(-8deg);
+            transform: scale(1.12) rotate(-8deg);
         }
         .om-meg-knapp h1 {
-            margin: 0;
-            font-size: 1.2em;
             transition: color 0.2s;
-        }
-        .om-meg-knapp:hover h1,
-        .om-meg-knapp:focus h1 {
-            color: #3e7aa4;
         }
         .xxl-innhold {
             display: flex;
@@ -117,22 +101,22 @@
             flex: 1;
             width: 70%;
             border-radius: 8px;
-            margin-top: 0;
             margin-left: 12px;
             align-self: flex-start;
         }
     </style>
 </head>
 <body>
+   <!-- Navigation bar -->
    <ul id="knapper">
-  <li class="logo">
-    <a href="index.html">
-      <img src="bilder/logo.png" alt="Logo" class="nav-logo">
-    </a>
-  </li>
-  <li><a id="homeButton" href="index.html" class="active"><i class="fa fa-home"></i></a></li>
-  <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
-</ul>
+      <li class="logo">
+        <a href="index.html">
+          <img src="bilder/logo.png" alt="Logo" class="nav-logo">
+        </a>
+      </li>
+      <li><a id="homeButton" href="index.html" class="active"><i class="fa fa-home"></i></a></li>
+      <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
+   </ul>
    <div id="menuContent" class="hidden">
       <ul>
         <li><a href="kontakt.html">Kontakt</a></li>
@@ -141,8 +125,8 @@
       </ul>
    </div>
 
-   <div class="om-meg-grid">
-    <div class="om-meg-container large">
+   <div class="om-meg-grid main-container">
+    <div class="om-meg-container card-color large">
             <img src="bilder/profil-bilde.jpg" alt="Jan Olav" class="om-meg-bilde" onclick="showLightbox(this.src)">
          <div class="om-meg-tekst"></div>
             <h1>Hei, jeg er Jan Olav!</h1>
@@ -154,38 +138,36 @@
             <a href="https://github.com/jangri09" target="_blank"><i class="fab fa-github"></i> GitHub</a>
          </div>
       </div>
-      <a href="prosjekt-meny.html" class="om-meg-container small om-meg-knapp">
+      <a href="prosjekt-meny.html" class="om-meg-container card-color effect-color small om-meg-knapp btn-base effect">
          <div style="display:flex; flex-direction:column; align-items:center;">
             <i class="fa fa-folder-open"></i>
             <h1>Mine prosjekter</h1>
             <p>Se oversikt over mine skole- og hobbyprosjekter.</p>
          </div>
       </a>
-      <a href="kontakt.html" class="om-meg-container small om-meg-knapp">
+      <a href="kontakt.html" class="om-meg-container card-color effect-color small om-meg-knapp btn-base effect">
          <div style="display:flex; flex-direction:column; align-items:center;">
             <i class="fa fa-address-book"></i>
             <h1>Kontakt meg</h1>
             <p>Send meg en melding eller se kontaktinfo.</p>
          </div>
       </a>
-      <div class="om-meg-container xxl">
+      <div class="om-meg-container card-color xxl">
          <div class="xxl-innhold">
             <div class="xxl-tekst">
                <i class="fa fa-newspaper" style="font-size:2.5em; color:#3e7aa4; margin-bottom:10px;"></i>
                <h1>Nettsiden er åpen!</h1>
-               <p>etter en lang og grundig prosess er nettsiden endelig åpen for publikum!</p>
+               <p>Etter en lang og grundig prosess er nettsiden endelig åpen for publikum!</p>
             </div>
             <img src="bilder/nyheter.png" alt="Nyheter" class="xxl-bilde" onclick="showLightbox(this.src)">
          </div>
       </div>
    </div>
-      <!-- Du kan legge til flere bokser med linker om du ønsker -->
+   <!-- Lightbox container -->
+   <div class="lightbox" id="lightbox" style="display:none;">
+      <button class="close-btn" onclick="closeLightbox()" style="position:absolute;top:32px;right:48px;font-size:2em;color:#fff;background:none;border:none;cursor:pointer;">×</button>
+      <img id="lightbox-img" src="" alt="Large image" style="max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 0 24px #000;">
    </div>
-<!-- Lightbox container -->
-<div class="lightbox" id="lightbox" style="display:none;">
-  <button class="close-btn" onclick="closeLightbox()" style="position:absolute;top:32px;right:48px;font-size:2em;color:#fff;background:none;border:none;cursor:pointer;">×</button>
-  <img id="lightbox-img" src="" alt="Large image" style="max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 0 24px #000;">
-</div>
    <script src="Js/menu.js"></script>
    <script src="Js/lightbox.js"></script>
 </body>

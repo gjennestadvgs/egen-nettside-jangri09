@@ -83,3 +83,12 @@
         height: 64px;
       }
     }
+    /* hovedmeny knapp mobil */
+                @media (max-width: 600px) {
+          #lede-knapp {
+            margin-top: 50px;
+            padding: 20px 30px;
+            position: relative;
+            font-size: large;
+          }
+        }

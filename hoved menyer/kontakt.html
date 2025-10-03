@@ -3,6 +3,7 @@
 <head>
   <title>Jan Olav</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/hover.css">
   <link rel="stylesheet" href="css/mobil.css">
   <link rel="stylesheet" href="css/lys-modus.css">
   <link rel="stylesheet" href="css/mørk-modus.css">
@@ -14,81 +15,79 @@
   <style>
     .contact-list {
       max-width: 700px;
-      margin: 80px auto 40px auto;
       display: flex;
       flex-direction: column;
       gap: 24px;
+      margin: 40px auto;
     }
     .contact {
+      margin-top: 10px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       gap: 20px;
-      border-radius: 10px;
-      padding: 16px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
-      cursor: pointer;
       position: relative;
       overflow: hidden;
+      z-index: 1;
+      transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
     }
-    .contact:hover {
-      box-shadow: 0 8px 24px rgba(62,122,164,0.18);
-      transform: translateY(-2px) scale(1.03);
-    }
-    .contact:hover img {
-      transform: scale(1.08) rotate(-4deg);
+    .contact:hover img,
+    .contact:focus img {
+      transform: scale(1.12) rotate(-4deg);
+      border-color: #3e7aa4;
     }
     .contact-info h2 {
       margin: 0 0 8px 0;
       font-size: 1.2em;
       transition: color 0.2s;
     }
-    .contact img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border: 2px solid #7389f6;
-  border-radius: 50%;
-  transition: border-color 0.2s, transform 0.2s;
-}
-    .contact:hover .contact-info h2 {
+    .contact:hover .contact-info h2,
+    .contact:focus .contact-info h2 {
       color: #3e7aa4;
+    }
+    .contact img {
+      margin: 10px;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border: 2px solid #7389f6;
+      border-radius: 50%;
+      transition: border-color 0.2s, transform 0.2s;
     }
   </style>
 </head>
 <body>
   <!-- Navigation bar -->
-<ul id="knapper">
-  <li class="logo">
-    <a href="index.html">
-      <img src="bilder/logo.png" alt="Logo" class="nav-logo">
-    </a>
-  </li>
-  <li><a id="homeButton" href="index.html" class="active"><i class="fa fa-home"></i></a></li>
-  <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
+  <ul id="knapper">
+    <li class="logo">
+      <a href="index.html">
+        <img src="bilder/logo.png" alt="Logo" class="nav-logo">
+      </a>
+    </li>
+    <li><a id="homeButton" href="index.html" class="active"><i class="fa fa-home"></i></a></li>
+    <li><a id="menuButton"><i class="fa fa-bars"></i></a></li>
   </ul>
-  
-
-<div id="menuContent" class="hidden">
-  <ul>
-        <li><a href="kontakt.html">Kontakt</a></li>
-    <li><a href="om-meg.html">Om meg</a></li>
-    <li><a href="prosjekt-meny.html">Prosjekter</a></li>
-  </ul>
-</div>
+  <div id="menuContent" class="hidden">
+    <ul>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="om-meg.html">Om meg</a></li>
+      <li><a href="prosjekt-meny.html">Prosjekter</a></li>
+    </ul>
+  </div>
   <!-- Contact list -->
-  <div class="contact-list">
-    <div class="contact">
+  <div class="contact-list main-container">
+    <div class="contact card-color effect-color effect">
       <img src="bilder/profil-bilde.jpg" alt="Jan Olav" onclick="showLightbox(this.src)">
       <div class="contact-info">
-        <h2>Jan Olav</h2> 
+        <h2>Jan Olav</h2>
         <p>E-mail: janolavgrimsrud@gmail.com</p>
         <div class="link">
           <a href="https://github.com/jangri09" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </div>
       </div>
     </div>
-    <div class="contact">
+    <div class="contact card-color effect-color effect">
       <img src="kontakt-bilder/bjarte.jpg" alt="Bjarte" onclick="showLightbox(this.src)">
       <div class="contact-info">
         <h2>Bjarte</h2>
@@ -98,7 +97,7 @@
         </div>
       </div>
     </div>
-    <div class="contact">
+    <div class="contact card-color effect-color effect">
       <img src="kontakt-bilder/kåre.jpg" alt="Kåre" onclick="showLightbox(this.src)">
       <div class="contact-info">
         <h2>Kåre</h2>

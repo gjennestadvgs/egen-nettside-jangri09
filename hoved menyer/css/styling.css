@@ -6,6 +6,7 @@ body {
         }
 /* Felles styling for lenker */
 .link a {
+   margin: 10px;
   text-decoration: none;
   font-size: 1em;
   display: flex;
@@ -44,4 +45,26 @@ body {
     font-weight: 600;
     text-decoration: none;
  }
+ img {
+    height: auto;
+    display: block;
+    /* ... andre img-relaterte stiler ... */
+}
+ .main-container {
+    max-width: 1200px; /* Eller en verdi som passer for det meste */
+    margin: 40px auto; /* En felles marg som kan overstyres */
+    padding: 0 15px; /* Litt padding for mobiler */
+ }
+.btn-base {
+    cursor: pointer;
+    transition: box-shadow 0.2s, background 0.2s, transform 0.2s;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 4px; /* Standard hjørner */
+    /* ... andre felles knappe-stiler ... */
+}
 
+.btn-base:hover,
+.btn-base:focus {
+    transform: scale(1.03); /* Eller 1.03, velg en standard */
+}

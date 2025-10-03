@@ -14,17 +14,11 @@
         #menuContent li a::before {
               background: rgba(115,137,246,0.18); /* Lys blå sirkel */
         }
-        .prosjekt-kort {
-    border: 1px solid #41444b; /* Kantfarge på prosjekt kortene */
-    background-color: #41444b; /* Bakgrunnsfarge på prosjekt kortene */
-    color: #ffffff; /* Tekstfarge på prosjekt kortene */
+        .prosjekt-kort p h1 {
+        color: #ffffff; /* Tekstfarge på prosjekt kortene */
         }
-        #lede-knapp {
-    background-color: #164465; /* Bakgrunnsfarge på hovedmeny knappen */
-    border: 0.4px solid #143b55; /* Kantfarge på hovedmeny knappen */
-        }
-.info {
-         background: #41444b; /* Bakgrunnsfarge på boksen */
+        .info {
+        background: #41444b; /* Bakgrunnsfarge på boksen */
         }
         #menuContent {
         border: 1px solid #2c3e50; /* Kantfarge på dropdown menyen */
@@ -32,25 +26,28 @@
         }
         #menuContent li a {
         color: white; /* Tekstfarge på lenkene i dropdown menyen */
-      }
-      .om-meg-container {
-        background-color: #41444b; /* Bakgrunnsfarge på om meg boksen */
         }
-        .kontakt {
+        .card-color, 
+        .project-card i.fab.fa-github{
             background: #41444b; /* Bakgrunnsfarge på kontakt boksen */
         }
-        .kontakt:hover {
-            background: #3e7aa4; /* Bakgrunnsfarge ved hover på kontakt boksen */
+
+        .effect-color:hover h2,
+        .effect-color:hover h1  {
+            color: #3e7aa4; /* Tekstfarge ved hover på kontakt boksen */
         }
+        .effect-color:hover {
+            background: #575962; /* Bakgrunnsfarge ved hover på kontakt boksen */
         }
-/* farge linker */
-.link a {
-  color: #3e7aa4;
-  background: #3c3f45;
-}
-.link a:hover {
-  background: #33363b;
-}
-.link a:visited {
-  color: #3e7aa4;
-}
+        /* farge linker */
+        .link a {
+          color: #3e7aa4;
+          background: #3c3f45;
+        }
+        .link a:hover {
+          background: #33363b;
+        }
+        .link a:visited {
+          color: #3e7aa4;
+        }
+      }

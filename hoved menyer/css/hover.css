@@ -1,0 +1,36 @@
+.effect {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+  z-index: 1;
+}
+
+.effect::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s cubic-bezier(.4,0,.2,1), height 0.4s cubic-bezier(.4,0,.2,1), opacity 0.2s;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.effect:hover::before,
+.effect:focus::before {
+  width: 220%;
+  height: 220%;
+  opacity: 1;
+}
+
+.effect:hover,
+.effect:focus {
+  box-shadow: 0 8px 32px rgba(62,122,164,0.18);
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+}
+
+

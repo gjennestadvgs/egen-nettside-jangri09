@@ -8,23 +8,23 @@
         }
         #lede-knapp {
             position: absolute;
-            top: 45%;
+            top: 50%;
             left: 50%;
-            transform: translate(-50%, 0);
+            transform: translate(-50%, -50%);
             padding: 1% 2%;
             text-align: center;
-            font-size: clamp(14px,2vw, 22px);
+            font-size: 22px;
             margin: 10px auto;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: transform 0.2s;
             z-index: 3;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+            overflow: hidden;
         }
-        #lede-knapp:hover {
-            transform: translate(-50%, 0) scale(1.05);
-        }
+        
         #tekst-over-bilde {
-            position: absolute;
+            position: fixed;
             top: 25%;
             left: 50%;
             transform: translate(-50%, -60%);
@@ -38,9 +38,9 @@
         #tekst-over-bilde h1 {
             font-size: clamp(20px, 6vw, 45px);
             font-weight: bold;
-            padding-bottom: 13px;
         }
         #tekst-over-bilde p {
+            margin-top: -10px;
             font-size: clamp(12px, 3vw, 25px);
             margin: 0;
         }
@@ -50,7 +50,6 @@
             display: block;
             z-index: 3;
         }
-
         #utforming {
             position: relative;
             width: 100%;
@@ -58,6 +57,8 @@
         }
 
         </style>
+        <link rel="stylesheet" href="css/hover.css">
+        <link rel="stylesheet" href="css/mobil.css">
         <link rel="stylesheet" href="css/lys-modus.css">
         <link rel="stylesheet" href="css/mørk-modus.css">
         <link rel="stylesheet" href="css/navigerings-bar.css">
@@ -91,7 +92,7 @@
     <h1 id="hjem-overskrift">Velkommen til min nettside!</h1>
     <p>Dette er forsiden av min personlige nettside. Her kan du finne informasjon om meg og mine prosjekter.</p>
   </div>
-    <button id="lede-knapp" onclick="window.location.href='om-meg.html'">Hvem er jeg?</button>
+    <button id="lede-knapp" class="btn-base card-color effect-color effect" onclick="window.location.href='om-meg.html'">Hvem er jeg?</button>
   </div>
 <script 
 src="Js/menu.js">
