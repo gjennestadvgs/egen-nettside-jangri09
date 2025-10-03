@@ -1,8 +1,9 @@
 body {
             background: #edf5ff; /* bakgrunnsfarge */
-            color: #333; /* tekstfarge */
 }
-
+        h1, h2, h3, p, a, span, button .info {
+          color: #1c1c1c; /* tekstfarge */
+        }
         ul#knapper {
             background: #20618f; /* bakgrunnsfarge på navigasjonsbaren */
         }

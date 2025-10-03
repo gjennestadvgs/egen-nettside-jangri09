@@ -83,3 +83,64 @@
         height: 64px;
       }
     }
+/* om meg side */
+@media (max-width: 900px) {
+  .hobby-og-beskrivelse {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .beskrivelse-høyre {
+    max-width: 100%;
+    align-items: left;
+  }
+  .beskrivelse-innhold {
+    max-width: 100%;
+  }
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0 8px;
+  }
+  .middle-image {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .middle-image img {
+    width: 80%;
+    height: auto;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+  }
+  .left-content {
+    order: 2;
+    text-align: left;
+    font-size: 1em;
+    margin-bottom: 12px;
+    flex-wrap: nowrap;
+  }
+  .left-content h1 {
+    font-size: 2em;
+    line-height: 1.1;
+  }
+  .left-content p {
+    font-size: 1em;
+  }
+  .om-meg-høyre {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    margin-top: 8px;
+  }
+  .om-meg-høyre .stat {
+    text-align: right;
+    margin-right: 0;
+    margin-bottom: 16px;
+    font-size: 1em;
+  }
+}

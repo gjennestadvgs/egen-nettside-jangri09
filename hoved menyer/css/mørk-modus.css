@@ -2,7 +2,9 @@
         @media (prefers-color-scheme: dark) {
         body {
           background: #383b42; /* bakgrunnsfarge */
-          color: #ffffff; /* tekstfarge */
+        }
+        h1, h2, h3, p, a, span, button, .info {
+          color: #e0e0e0; /* tekstfarge */
         }
         ul#knapper {
             background: #164465; /* bakgrunnsfarge på navigasjonsbaren */
