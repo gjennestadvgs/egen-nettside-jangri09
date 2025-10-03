@@ -3,7 +3,7 @@
         body {
           background: #383b42; /* bakgrunnsfarge */
         }
-        h1, h2, h3, p, a, span, button, .info {
+        h1, h2, h3, p, a, span, button, .back-button, .info {
           color: #e0e0e0; /* tekstfarge */
         }
         ul#knapper {
